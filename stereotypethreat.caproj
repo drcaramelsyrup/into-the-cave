@@ -10,12 +10,16 @@
     <unique-id>3phjf8c2bcezm</unique-id>
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -42,7 +46,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="BackgroundTile" sid="1702273566474247">
             <plugin id="TiledBg" />
             <texture />
@@ -99,14 +103,160 @@
         <object-type name="Text" sid="9766938218187635">
             <plugin id="Text" />
         </object-type>
+        <object-type name="ConfidenceBubble" sid="5467705171348082">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7423127183004546" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Spikes" sid="6478525385377356">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9661416122946652" speed="5">
+                    <frame duration="1" hotspotX="0.659459" hotspotY="0.453125" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Healer" sid="546424970527466">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4843132714950766" speed="5">
+                    <frame duration="1" hotspotX="0.48" hotspotY="0.247059">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.995" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="STTrigger" sid="3934452734627996">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="5" sid="7569217685721347" speed="20">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164" y="0.164" />
+                            <point x="0.5" y="0.056" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.88" y="0.5" />
+                            <point x="0.788" y="0.788" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.176" y="0.824" />
+                            <point x="0.072" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="5" loop="0" name="PostReveal" pingpong="0" repeatcount="1" repeatto="1" sid="4819364703332798" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164" y="0.164" />
+                            <point x="0.5" y="0.056" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.88" y="0.5" />
+                            <point x="0.788" y="0.788" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.176" y="0.824" />
+                            <point x="0.072" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164" y="0.164" />
+                            <point x="0.5" y="0.056" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.88" y="0.5" />
+                            <point x="0.788" y="0.788" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.176" y="0.824" />
+                            <point x="0.072" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164" y="0.164" />
+                            <point x="0.5" y="0.056" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.88" y="0.5" />
+                            <point x="0.788" y="0.788" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.176" y="0.824" />
+                            <point x="0.072" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164" y="0.164" />
+                            <point x="0.5" y="0.056" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.88" y="0.5" />
+                            <point x="0.788" y="0.788" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.176" y="0.824" />
+                            <point x="0.072" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.164" y="0.164" />
+                            <point x="0.5" y="0.056" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.88" y="0.5" />
+                            <point x="0.788" y="0.788" />
+                            <point x="0.5" y="0.88" />
+                            <point x="0.176" y="0.824" />
+                            <point x="0.072" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="5985002539891549">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="6847439645915031">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Button" sid="6863788377201661">
+            <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="Anchor" sid="4235192847187289">
+                    <behavior id="Anchor" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="STModeList" sid="4827561024604377">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="STEditBox" sid="8480885090538126">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="STToggle" sid="2330210717533062">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="STModeList2" sid="7103880515149916">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="STSetButton" sid="4438023547695054">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
         <layout>Layout 2.xml</layout>
+        <layout>Layout 3.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Event sheet 2.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="20" />
