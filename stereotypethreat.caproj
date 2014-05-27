@@ -115,7 +115,7 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9661416122946652" speed="5">
-                    <frame duration="1" hotspotX="0.659459" hotspotY="0.453125" />
+                    <frame duration="1" hotspotX="0.508108" hotspotY="0.953125" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -247,12 +247,43 @@
         <object-type name="STSetButton" sid="4438023547695054">
             <plugin id="Button" />
         </object-type>
+        <object-type name="TrapCollider" sid="4730609678392686">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Activated" sid="4069149888202208" type="boolean" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7142842055867521" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="STOverlay" sid="1358523760645731">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="BrownDoor" sid="6006504905148298">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9832292140387978" speed="5">
+                    <frame duration="1" hotspotX="0.488636" hotspotY="0.594059" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="446597144786059">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3257922503592076" speed="5">
+                    <frame duration="1" hotspotX="0.505682" hotspotY="0.623762" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
         <layout>Layout 2.xml</layout>
-        <layout>Layout 3.xml</layout>
+        <layout>Stereotype Threat.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>

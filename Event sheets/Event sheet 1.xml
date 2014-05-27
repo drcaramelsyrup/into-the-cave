@@ -163,6 +163,10 @@
                     <param id="0" name="Variable">Confidence</param>
                     <param id="1" name="Value">0.1</param>
                 </action>
+                <action id="-9" name="Set value" sid="2081431250710271" type="System">
+                    <param id="0" name="Variable">StereotypeThreat</param>
+                    <param id="1" name="Value">&quot;Off&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2677604466105685">
@@ -260,6 +264,42 @@
                 </action>
                 <action behavior="Platform" id="6" name="Set max fall speed" sid="6681009711672461" type="Player">
                     <param id="0" name="Max fall speed">STFallSpeed</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4866300280184985" type="STOverlay">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3658798405365847">
+            <conditions>
+                <condition id="-22" name="Else" sid="237685826035771" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6905657891175874" type="STOverlay">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>When you step on a trap that creates the trigger</comment>
+        <event-block sid="9152782225960332">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1856061374399068" type="Player">
+                    <param id="0" name="Object">TrapCollider</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3599337804501657" type="TrapCollider">
+                    <param id="0" name="Instance variable">Activated</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="5410435396888078" type="System">
+                    <param id="0" name="Object to create">STTrigger</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">TrapCollider.X</param>
+                    <param id="3" name="Y">TrapCollider.Y-10</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="6361341689148992" type="TrapCollider">
+                    <param id="0" name="Instance variable">Activated</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -480,6 +520,22 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <comment>Hmm, anything for &quot;go to next layout&quot;?</comment>
+        <event-block sid="4292589187048332">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="4887461129930532" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="7886215540169093" type="Player">
+                    <param id="0" name="Object">BrownDoor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="8103547399045372" type="System">
+                    <param id="0" name="Layout">&quot;&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
