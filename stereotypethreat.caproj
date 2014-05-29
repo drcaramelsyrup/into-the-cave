@@ -11,6 +11,7 @@
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="List" version="1">List</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -46,7 +47,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="0">
+    <object-folder expanded="1">
         <object-type name="BackgroundTile" sid="1702273566474247">
             <plugin id="TiledBg" />
             <texture />
@@ -115,7 +116,10 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9661416122946652" speed="5">
-                    <frame duration="1" hotspotX="0.508108" hotspotY="0.953125" />
+                    <frame duration="1" hotspotX="0.502703" hotspotY="0.9375" />
+                </animation>
+                <animation framecount="1" loop="0" name="Watching" pingpong="0" repeatcount="1" repeatto="0" sid="2768886659609439" speed="5">
+                    <frame duration="1" hotspotX="0.516484" hotspotY="0.984127" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -125,10 +129,10 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4843132714950766" speed="5">
                     <frame duration="1" hotspotX="0.48" hotspotY="0.247059">
                         <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="0.995" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.275" y="0" />
+                            <point x="0.725" y="0" />
+                            <point x="0.725" y="1" />
+                            <point x="0.275" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -262,7 +266,7 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="BrownDoor" sid="6006504905148298">
+        <object-type name="SubDoor" sid="6006504905148298">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9832292140387978" speed="5">
@@ -270,11 +274,95 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="446597144786059">
+        <object-type name="SuperDoor" sid="446597144786059">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="The name of the layout it leads to" name="LeadsTo" sid="4146344451251055" type="string" />
+            </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3257922503592076" speed="5">
-                    <frame duration="1" hotspotX="0.505682" hotspotY="0.623762" />
+                    <frame duration="1" hotspotX="0.488636" hotspotY="0.985148" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Lock" sid="5720857177741855">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5707051710184435">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3071765689519856" speed="5">
+                    <frame duration="1" hotspotX="0.503311" hotspotY="0.924138" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Key" sid="650892989989993">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Whether to follow the player" name="PickedUp" sid="7398738441441284" type="boolean" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3792561464553489" speed="5">
+                    <frame duration="1" hotspotX="-0.0078125" hotspotY="0.984375" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScriptText" sid="7307563676402549">
+            <plugin id="Text" />
+        </object-type>
+        <object-type global="1" name="TextScriptMap" sid="1131038963587404">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="ScriptTrigger" sid="2846397484724969">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ScriptKey" sid="5784401684366926" type="string" />
+                <instance-variable name="Activated" sid="3379325450632033" type="boolean" />
+                <instance-variable comment="The text to display on trigger" name="Text" sid="9519186292987302" type="string" />
+            </instance-variables>
+            <container>
+                <type>ThoughtBubbleTail</type>
+                <type>ScriptTrigger</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370612891255559" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.3675" />
+                            <point x="0.998" y="0.3775" />
+                            <point x="1" y="1" />
+                            <point x="0.006" y="0.995" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBackdrop" sid="5550976696423754">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9202841580015665" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ThoughtBubbleTail" sid="9785628126472352">
+            <plugin id="Sprite" />
+            <container>
+                <type>ThoughtBubbleTail</type>
+                <type>ScriptTrigger</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6592143106962015" speed="5">
+                    <frame duration="1" hotspotX="-0.03" hotspotY="0.55">
+                        <collision-poly>
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.158333" y="1" />
+                            <point x="0.158333" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -282,7 +370,9 @@
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
-        <layout>Layout 2.xml</layout>
+        <layout>Level A1.xml</layout>
+        <layout>Level A2.xml</layout>
+        <layout>Level A3.xml</layout>
         <layout>Stereotype Threat.xml</layout>
     </layout-folder>
     <event-folder expanded="1">

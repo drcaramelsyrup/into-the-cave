@@ -10,9 +10,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout>Layout 1</layout>
-        <layout>Layout 2</layout>
-        <layout active="1">Stereotype Threat</layout>
+        <layout active="1">Layout 1</layout>
+        <layout>Level A1</layout>
+        <layout>Stereotype Threat</layout>
+        <layout>Level A2</layout>
+        <layout>Level A3</layout>
         <event-sheet>Event sheet 1</event-sheet>
     </open-tabs>
     <properties>

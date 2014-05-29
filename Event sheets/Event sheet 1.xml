@@ -268,6 +268,10 @@
                 <action id="-15" name="Set visible" sid="4866300280184985" type="STOverlay">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="9710350827151247" type="Spikes">
+                    <param id="0" name="Animation">&quot;Watching&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3658798405365847">
@@ -277,6 +281,10 @@
             <actions>
                 <action id="-15" name="Set visible" sid="6905657891175874" type="STOverlay">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="8104634642043953" type="Spikes">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -521,19 +529,276 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <comment>Hmm, anything for &quot;go to next layout&quot;?</comment>
+        <comment>Doors - they lead to wherever their LeadsTo instance variable says (which we can set for each door instance from the Layout editor)</comment>
         <event-block sid="4292589187048332">
             <conditions>
                 <condition id="0" name="On key pressed" sid="4887461129930532" type="Keyboard">
                     <param id="0" name="Key">40 (Down arrow)</param>
                 </condition>
                 <condition id="1" name="Is overlapping another object" sid="7886215540169093" type="Player">
-                    <param id="0" name="Object">BrownDoor</param>
+                    <param id="0" name="Object">SuperDoor</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="8103547399045372" type="System">
-                    <param id="0" name="Layout">&quot;&quot;</param>
+                    <param id="0" name="Layout">SuperDoor.LeadsTo</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Keys and locks</comment>
+        <event-block sid="4711074655388404">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="9741132814635955" type="Key">
+                    <param id="0" name="Instance variable">PickedUp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="4103571985288914" type="Key">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6078907512534404">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7418328847015677" type="Player">
+                    <param id="0" name="Object">Key</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="4225786549866575" type="Key">
+                    <param id="0" name="Instance variable">PickedUp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7163231747159944">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8910837532331525" type="Key">
+                    <param id="0" name="Object">Lock</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5984242031235999" type="Lock" />
+            </actions>
+        </event-block>
+        <comment>This is where we add all of the message/dialogue scripts! The way it works right now: we give objects a &quot;ScriptKey&quot; instance variable that we can set in the editor, and when we interact with that object, the game will display its corresponding value in TextScriptMap</comment>
+        <variable comment="Whether we&apos;re displaying text or not" constant="0" name="DisplayingText" sid="9430502538177119" static="0" type="text">False</variable>
+        <event-block sid="8971721187247068">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9876884772866672" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="4252458096880545" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A1 Start&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Prof H&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7243528591470964" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A2 Start&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;So, you think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down there - the fate of the village depends on us finding that relic. Just... don&apos;t get in my way.&apos;- V&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="5152925871404224" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A3 Start&quot;</param>
+                    <param id="1" name="Value">&quot;Not all doors are open to you yet - for one thing, access to some rooms requires a key... -Prof. H&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6587192187194758" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A4 Start&quot;</param>
+                    <param id="1" name="Value">&quot;I&apos;m so worried about you going down there alone... I hope there&apos;ll be people to take care of you!&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3916339264663198">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7556531255650479" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6063147676240336" type="ScriptText">
+                    <param id="0" name="Text">TextScriptMap.Get(LayoutName &amp; &quot; Start&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="9075597813902095" type="System">
+                    <param id="0" name="Variable">DisplayingText</param>
+                    <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>By default, running into a ScriptTrigger displays its Text</comment>
+        <event-block sid="753406837318355">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="8750873904428183" type="Player">
+                    <param id="0" name="Object">ScriptTrigger</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9438855837019547" type="ScriptText">
+                    <param id="0" name="Text">ScriptTrigger.Text</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8021903134203901" type="ScriptTrigger">
+                    <param id="0" name="Instance variable">Activated</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="2101531747997482" type="System">
+                    <param id="0" name="Variable">DisplayingText</param>
+                    <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="6830457166845203" type="ThoughtBubbleTail">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5430540068993927" type="ThoughtBubbleTail">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>But if its text needs to be multi-line (i.e. with line breaks), we use its ScriptKey to find a string in TextScriptMap that we set at the start of the layout</comment>
+                <event-block sid="2956441818313777">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5815270603052739" type="ScriptTrigger">
+                            <param id="0" name="Instance variable">ScriptKey</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7229668651502387" type="ScriptText">
+                            <param id="0" name="Text">TextScriptMap.Get(ScriptTrigger.ScriptKey)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5216752596742146">
+            <conditions>
+                <condition id="-22" name="Else" sid="4498770769688786" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3083337256049436" type="ThoughtBubbleTail">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Displaying the text + backdrop</comment>
+        <event-block sid="5834674740278946">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9034262460323727" type="System">
+                    <param id="0" name="Variable">DisplayingText</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;True&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8515019181606677" type="TextBackdrop">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5242073703859205" type="ScriptText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="25363927512154">
+            <conditions>
+                <condition id="-22" name="Else" sid="6811283108207654" type="System" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="786766833279374" type="TextBackdrop">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8867364136586201" type="ScriptText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group collapsed="1" description="For later use if above things don&apos;t work" inactive="1" sid="2145993407547296" title="Commented Out">
+            <sub-events>
+                <variable comment="Keeps track of how long the main displayed piece of text has been onscreen" constant="0" name="TextDisplayTimer" sid="5681939896207478" static="0" type="number">0</variable>
+                <event-block sid="4378863871672061">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4560305666095496" type="System">
+                            <param id="0" name="Variable">TextDisplayTimer</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">time - 5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1190236007306877" type="System">
+                            <param id="0" name="Variable">DisplayingText</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;True&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="3901741307214758" type="TextBackdrop">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5341530599109464" type="ScriptText">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1964976589869389" type="System">
+                            <param id="0" name="Variable">DisplayingText</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5071859030175573">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9644219420075356" type="Player">
+                            <param id="0" name="Object">ScriptTrigger</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8023825360579733" type="ScriptTrigger">
+                            <param id="0" name="Instance variable">Activated</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1136688688435662" type="ScriptText">
+                            <param id="0" name="Text">ScriptTrigger.Text</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5616063683637397" type="ScriptTrigger">
+                            <param id="0" name="Instance variable">Activated</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1768306177640089" type="System">
+                            <param id="0" name="Variable">DisplayingText</param>
+                            <param id="1" name="Value">&quot;True&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>But if its text needs to be multi-line (i.e. with line breaks), we use its ScriptKey to find a string in TextScriptMap that we set at the start of the layout</comment>
+                        <event-block sid="3278093027036478">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7110073922565334" type="ScriptTrigger">
+                                    <param id="0" name="Instance variable">ScriptKey</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6919540941929419" type="ScriptText">
+                                    <param id="0" name="Text">TextScriptMap.Get(ScriptTrigger.ScriptKey)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="2590202997716308">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="5140614726510509">
+            <conditions>
+                <condition id="1" inverted="1" name="Is overlapping another object" sid="1338646270469681" type="Player">
+                    <param id="0" name="Object">ScriptTrigger</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="9025215539937293" type="ScriptTrigger">
+                    <param id="0" name="Instance variable">Activated</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="7522972749111137" type="ScriptTrigger">
+                    <param id="0" name="Instance variable">Activated</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2791973394492659" type="System">
+                    <param id="0" name="Variable">DisplayingText</param>
+                    <param id="1" name="Value">&quot;False&quot;</param>
                 </action>
             </actions>
         </event-block>
