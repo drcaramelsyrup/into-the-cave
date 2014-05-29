@@ -624,6 +624,7 @@
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
                         <Text>&quot;Not all doors are open to you yet - for one thing, access to some rooms requires a key... -Prof. H&quot;</Text>
+                        <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

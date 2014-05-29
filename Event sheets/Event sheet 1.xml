@@ -692,6 +692,10 @@
                 <action id="-15" name="Set visible" sid="5242073703859205" type="ScriptText">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="10" name="Load image from URL" sid="7869517103043137" type="ScriptTrigger">
+                    <param id="0" name="URI">ScriptTrigger.Image</param>
+                    <param id="1" name="Size">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="25363927512154">

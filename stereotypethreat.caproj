@@ -321,10 +321,12 @@
                 <instance-variable name="ScriptKey" sid="5784401684366926" type="string" />
                 <instance-variable name="Activated" sid="3379325450632033" type="boolean" />
                 <instance-variable comment="The text to display on trigger" name="Text" sid="9519186292987302" type="string" />
+                <instance-variable comment="url for image" name="Image" sid="7723989525497924" type="string" />
             </instance-variables>
             <container>
                 <type>ThoughtBubbleTail</type>
                 <type>ScriptTrigger</type>
+                <type>Sprite</type>
             </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="370612891255559" speed="5">
@@ -352,6 +354,7 @@
             <container>
                 <type>ThoughtBubbleTail</type>
                 <type>ScriptTrigger</type>
+                <type>Sprite</type>
             </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6592143106962015" speed="5">
@@ -361,6 +364,30 @@
                             <point x="1" y="1" />
                             <point x="0.158333" y="1" />
                             <point x="0.158333" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="6222282433309796">
+            <plugin id="Sprite" />
+            <container>
+                <type>ThoughtBubbleTail</type>
+                <type>ScriptTrigger</type>
+                <type>Sprite</type>
+            </container>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8712343178763834" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.516667">
+                        <collision-poly>
+                            <point x="0.9" y="0.133333" />
+                            <point x="0.966667" y="0.488889" />
+                            <point x="0.816667" y="0.755556" />
+                            <point x="0.5" y="0.933333" />
+                            <point x="0.0666667" y="0.911111" />
+                            <point x="0" y="0.488889" />
+                            <point x="0.133333" y="0.177778" />
+                            <point x="0.5" y="0.222222" />
                         </collision-poly>
                     </frame>
                 </animation>

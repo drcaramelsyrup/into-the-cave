@@ -634,6 +634,7 @@
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
                         <Text>There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&apos; - Prof H</Text>
+                        <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
