@@ -85,7 +85,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-99</x>
-                        <y>277</y>
+                        <y>278</y>
                         <z>0</z>
                         <width>36.100868225</width>
                         <height>56.729934692</height>
@@ -172,8 +172,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-128</x>
-                        <y>160</y>
+                        <x>-175</x>
+                        <y>114</y>
                         <z>0</z>
                         <width>104</width>
                         <height>98</height>

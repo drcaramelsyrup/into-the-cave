@@ -573,6 +573,7 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="5984242031235999" type="Lock" />
+                <action id="-9" name="Destroy" sid="4020558458793021" type="Key" />
             </actions>
         </event-block>
         <variable comment="Whether we&apos;re displaying text or not" constant="0" name="DisplayingText" sid="9430502538177119" static="0" type="text">False</variable>
@@ -606,6 +607,10 @@
                     <param id="0" name="Key">&quot;Level B3 Start&quot;</param>
                     <param id="1" name="Value">&quot;...&quot;</param>
                 </action>
+                <action id="0" name="Add key" sid="9862869336649597" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level C1 Start&quot;</param>
+                    <param id="1" name="Value">&quot;An elevator! I wonder if I can make use of that.&quot;</param>
+                </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
                 <action id="0" name="Set text" sid="6063147676240336" type="ScriptText">
@@ -618,6 +623,14 @@
                 <action id="-10" name="Add to" sid="8893497041637085" type="System">
                     <param id="0" name="Variable">Confidence</param>
                     <param id="1" name="Value">30</param>
+                </action>
+                <action id="-3" name="Set position" sid="90637688435822" type="TextBackdrop">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">320</param>
+                </action>
+                <action id="-3" name="Set position" sid="8137884636486693" type="ScriptText">
+                    <param id="0" name="X">32</param>
+                    <param id="1" name="Y">352</param>
                 </action>
             </actions>
         </event-block>
