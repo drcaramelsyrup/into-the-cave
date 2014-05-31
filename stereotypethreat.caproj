@@ -608,6 +608,8 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5402328306391776" speed="5">
                     <frame duration="1" hotspotX="0.507576" hotspotY="0.581395">
+                        <image-point name="Imagepoint 1" x="0.212121" y="0" />
+                        <image-point name="Imagepoint 2" x="0.515152" y="-0.511628" />
                         <collision-poly>
                             <point x="0" y="0.581395" />
                             <point x="1" y="0.604651" />
@@ -615,6 +617,17 @@
                             <point x="0" y="1" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LevelChangeTrigger" sid="2838399594464115">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LeadsTo" sid="9376347317526036" type="string" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3805786459112785" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>

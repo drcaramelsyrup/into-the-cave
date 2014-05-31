@@ -17,53 +17,6 @@
                 <action behavior="Platform" id="12" name="Fall through" sid="4923350319068316" type="Player" />
             </actions>
         </event-block>
-        <comment>Allow WASD as alternate controls to arrow keys.</comment>
-        <event-block sid="2456044680011258">
-            <conditions>
-                <condition id="2" name="Key is down" sid="2863886346110334" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="2870827634912682" type="Player">
-                    <param id="0" name="Control">2</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9908641211705027">
-            <conditions>
-                <condition id="2" name="Key is down" sid="944723428963517" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="5837331682471275" type="Player">
-                    <param id="0" name="Control">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9028125237132646">
-            <conditions>
-                <condition id="2" name="Key is down" sid="4365459276089619" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="6048787410067527" type="Player" />
-            </actions>
-        </event-block>
-        <event-block sid="3537275696355294">
-            <conditions>
-                <condition id="2" name="Key is down" sid="8951813168710161" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="7" name="Simulate control" sid="1027203735376377" type="Player">
-                    <param id="0" name="Control">1</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="4937441876236133">
             <conditions>
                 <condition behavior="Platform" id="3" name="Is jumping" sid="7585992242517911" type="Player" />
@@ -234,34 +187,27 @@
                 <action id="-26" name="Restart layout" sid="1948854674926905" type="System" />
             </actions>
         </event-block>
-        <event-block sid="1007090800690476">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="2543908404627788" type="System" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Set position" sid="3628511314494306" type="ConfidenceBubble">
-                    <param id="0" name="X">Player.X</param>
-                    <param id="1" name="Y">Player.Y</param>
-                </action>
-                <action id="9" name="Set scale" sid="392129962728687" type="ConfidenceBubble">
-                    <param id="0" name="Scale">1*Confidence/100</param>
-                </action>
-                <action id="-16" name="Set opacity" sid="135906544863241" type="ConfidenceBubble">
-                    <param id="0" name="Opacity">Confidence</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>If land on spikes, lose a bunch of confidence immediately and gradually lose more until you get off of them.</comment>
+        <variable comment="How long before taking another chunk of damage from spikes" constant="0" name="TimeOfLastDamage" sid="7607592607069084" static="0" type="number">0</variable>
+        <comment>If land on spikes, lose a bunch of confidence immediately and gradually lose more until you get off of them, or until a second passes.</comment>
         <event-block sid="2770252835999996">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="5629216206535351" type="Player">
                     <param id="0" name="Object">CenterSpikes</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="102802625227375" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">time-1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-11" name="Subtract from" sid="5369278506689451" type="System">
                     <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Set value" sid="4403675484224019" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Value">time</param>
                 </action>
             </actions>
         </event-block>
@@ -270,9 +216,76 @@
                 <condition id="1" name="Is overlapping another object" sid="268835511540482" type="Player">
                     <param id="0" name="Object">LeftSpikes</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="7455531536382156" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">time-1</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-11" name="Subtract from" sid="5188419681608214" type="System">
+                <action id="-11" name="Subtract from" sid="3465191094402477" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Set value" sid="3709213671708081" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5586328379240207">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="776750820233655" type="Player">
+                    <param id="0" name="Object">RightSpikes</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9764383943310933" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">time-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="2742626210031137" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">10</param>
+                </action>
+                <action id="-9" name="Set value" sid="4342413207781938" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Value">time</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2961328511090889">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2334563366550877" type="Player">
+                    <param id="0" name="Object">LeftSpikes</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1104791769744439" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">time-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="9792368151883406" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2209806221353199">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="3514744934161543" type="Player">
+                    <param id="0" name="Object">RightSpikes</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="5682081886762695" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">time-1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="63748275303822" type="System">
                     <param id="0" name="Variable">Confidence</param>
                     <param id="1" name="Value">0.5</param>
                 </action>
@@ -280,8 +293,13 @@
         </event-block>
         <event-block sid="3998955102154366">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="776750820233655" type="Player">
-                    <param id="0" name="Object">RightSpikes</param>
+                <condition id="1" name="Is overlapping another object" sid="2864361169724479" type="Player">
+                    <param id="0" name="Object">CenterSpikes</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="60608327520151" type="System">
+                    <param id="0" name="Variable">TimeOfLastDamage</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">time-1</param>
                 </condition>
             </conditions>
             <actions>
@@ -346,6 +364,7 @@
         <variable constant="0" name="NormalGravity" sid="1453190809931728" static="0" type="number">1500</variable>
         <variable constant="0" name="NormalMaxSpeed" sid="3664709792189393" static="0" type="number">330</variable>
         <variable constant="0" name="NormalMaxFallSpeed" sid="4136746460324879" static="0" type="number">1000</variable>
+        <comment>Setting the normal things</comment>
         <event-block sid="5194287711912814">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1094273347508541" type="System" />
@@ -363,6 +382,20 @@
                 <action behavior="Platform" id="6" name="Set max fall speed" sid="3428397533178259" type="Player">
                     <param id="0" name="Max fall speed">NormalMaxFallSpeed</param>
                 </action>
+                <action id="-3" name="Set position" sid="3628511314494306" type="ConfidenceBubble">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action id="9" name="Set scale" sid="392129962728687" type="ConfidenceBubble">
+                    <param id="0" name="Scale">1*Confidence/100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="135906544863241" type="ConfidenceBubble">
+                    <param id="0" name="Opacity">Confidence</param>
+                </action>
+                <action id="-9" name="Set value" sid="7154160482142545" type="System">
+                    <param id="0" name="Variable">StereotypeThreat</param>
+                    <param id="1" name="Value">&quot;Off&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>Stereotype Threat (ST) attributes - e.g. jump strength gets set to STJumpStrength if StereotypeThreatMode is &quot;Strength&quot;, but the others unaffected</comment>
@@ -371,17 +404,6 @@
         <variable constant="0" name="STMaxSpeed" sid="5761365743249245" static="0" type="number">330</variable>
         <variable constant="0" name="STFallSpeed" sid="2800836596838828" static="0" type="number">1000</variable>
         <comment>Stereotype threat! Each frame it&apos;s off until it picks up an active STTrigger within range.</comment>
-        <event-block sid="8077312392370045">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="7904399641397996" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="7154160482142545" type="System">
-                    <param id="0" name="Variable">StereotypeThreat</param>
-                    <param id="1" name="Value">&quot;Off&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="4452750037056116">
             <conditions>
                 <condition id="-9" name="Is visible" sid="1238174313062442" type="STTrigger" />
@@ -485,222 +507,6 @@
         </event-block>
         <comment>For changing rules and stuff realtime during playtesting...</comment>
         <variable comment="Whether to override the stereotype threat triggers with the toggle dropdown" constant="0" name="PlaytestOverride" sid="4234821583045788" static="0" type="text"></variable>
-        <event-group collapsed="1" description="" sid="8699183975485879" title="Playtest Rule Changing">
-            <sub-events>
-                <event-block sid="7389088377251262">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="7897504822480091" type="System">
-                            <param id="0" name="Variable">PlaytestOverride</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;On&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="5565157572093199" type="System">
-                            <param id="0" name="Variable">StereotypeThreat</param>
-                            <param id="1" name="Value">STToggle.SelectedText</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>G -&gt; revealing the - signs are actually gender symbols on their side!</comment>
-                <event-block sid="7266611664666504">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="7215456464721624" type="Keyboard">
-                            <param id="0" name="Key">71 (G)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="160720712953886" type="STTrigger">
-                            <param id="0" name="Animation">&quot;PostReveal&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>P -&gt; display Playtest ui elements for tweaking</comment>
-                <event-block sid="3072978569893009">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="99886604995124" type="Keyboard">
-                            <param id="0" name="Key">80 (P)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Set visible" sid="6107823490012146" type="STModeList">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="3" name="Set visible" sid="222799963635868" type="STEditBox">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="1184632401317162" type="STModeList2">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="4879747161494173" type="STSetButton">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="434975059186305" type="STToggle">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="2412872315805902" type="System">
-                            <param id="0" name="Variable">PlaytestOverride</param>
-                            <param id="1" name="Value">&quot;On&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>O -&gt; hide the Playtest ui</comment>
-                <event-block sid="228384595680269">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="8017675299996958" type="Keyboard">
-                            <param id="0" name="Key">79 (O)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="2" name="Set visible" sid="6634076398709157" type="STModeList">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="3" name="Set visible" sid="8964295265958811" type="STEditBox">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="9021863298602057" type="STModeList2">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="1228302470205342" type="STToggle">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="2" name="Set visible" sid="5093792959613696" type="STSetButton">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="4534403965667523" type="System">
-                            <param id="0" name="Variable">PlaytestOverride</param>
-                            <param id="1" name="Value">&quot;Off&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7520497064593666">
-                    <conditions>
-                        <condition id="4" name="Compare selected item text" sid="1460825420163723" type="STModeList">
-                            <param id="0" name="Text to compare">&quot;Str&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6444554393895663" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Value">&quot;Strength&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5825376488584453">
-                    <conditions>
-                        <condition id="4" name="Compare selected item text" sid="1503410760559245" type="STModeList">
-                            <param id="0" name="Text to compare">&quot;Grv&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="4324945873919993" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Value">&quot;Gravity&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6230079677166374">
-                    <conditions>
-                        <condition id="4" name="Compare selected item text" sid="6403360166956234" type="STModeList">
-                            <param id="0" name="Text to compare">&quot;Spd&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="576312303908004" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Value">&quot;Speed&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9221469059929398">
-                    <conditions>
-                        <condition id="4" name="Compare selected item text" sid="1178529257773803" type="STModeList">
-                            <param id="0" name="Text to compare">&quot;FSpd&quot;</param>
-                            <param id="1" name="Case sensitivity">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="7215865327734018" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Value">&quot;Fall Speed&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Clicking STSetButton sets one of the Stereotype Threat variables to whatever&apos;s in the edit box, depending on the current mode</comment>
-            </sub-events>
-        </event-group>
-        <event-block sid="5671860310186345">
-            <conditions>
-                <condition id="0" name="On clicked" sid="3698095600971205" type="STSetButton" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="6183246267086808">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="4289397888348532" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Strength&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="6535918141250011" type="System">
-                            <param id="0" name="Variable">STJumpStrength</param>
-                            <param id="1" name="Value">STEditBox.Text</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="582515165467611">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="6794672010185314" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Gravity&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="315086179187822" type="System">
-                            <param id="0" name="Variable">STGravity</param>
-                            <param id="1" name="Value">STEditBox.Text</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="973487367177299">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="7506626787120723" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Speed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="8081483250344022" type="System">
-                            <param id="0" name="Variable">STMaxSpeed</param>
-                            <param id="1" name="Value">STEditBox.Text</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1997513775921124">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="6170332936605948" type="System">
-                            <param id="0" name="Variable">StereotypeThreatMode</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;Fall Speed&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="2660940416649723" type="System">
-                            <param id="0" name="Variable">STFallSpeed</param>
-                            <param id="1" name="Value">STEditBox.Text</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <comment>Doors - they lead to wherever their LeadsTo instance variable says (which we can set for each door instance from the Layout editor)</comment>
         <event-block sid="4292589187048332">
             <conditions>
@@ -769,8 +575,8 @@
                 <action id="-9" name="Destroy" sid="5984242031235999" type="Lock" />
             </actions>
         </event-block>
-        <comment>This is where we add all of the message/dialogue scripts! The way it works right now: we give objects a &quot;ScriptKey&quot; instance variable that we can set in the editor, and when we interact with that object, the game will display its corresponding value in TextScriptMap</comment>
         <variable comment="Whether we&apos;re displaying text or not" constant="0" name="DisplayingText" sid="9430502538177119" static="0" type="text">False</variable>
+        <comment>Setting the text at the start of the level and making sure the confidence bubble is in front of all but the solid tiles</comment>
         <event-block sid="8971721187247068">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="9876884772866672" type="System" />
@@ -790,25 +596,28 @@
                 </action>
                 <action id="0" name="Add key" sid="6587192187194758" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;Hey, that&apos;s V over there! What&apos;s that on his head?&quot;</param>
+                    <param id="1" name="Value">&quot;Hey, that&apos;s V over there! Wait... what&apos;s that blue thing?&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="2542405754990705" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B2 Start&quot;</param>
+                    <param id="1" name="Value">&quot;Why did they get that shortcut and I didn&apos;t?&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7112955970850384" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level B3 Start&quot;</param>
                     <param id="1" name="Value">&quot;...&quot;</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="3916339264663198">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="7556531255650479" type="System" />
-            </conditions>
-            <actions>
+                <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
+                <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
                 <action id="0" name="Set text" sid="6063147676240336" type="ScriptText">
                     <param id="0" name="Text">TextScriptMap.Get(LayoutName &amp; &quot; Start&quot;)</param>
                 </action>
                 <action id="-9" name="Set value" sid="9075597813902095" type="System">
                     <param id="0" name="Variable">DisplayingText</param>
                     <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+                <action id="-10" name="Add to" sid="8893497041637085" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">30</param>
                 </action>
             </actions>
         </event-block>
@@ -902,90 +711,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-group collapsed="1" description="For later use if above things don&apos;t work" inactive="1" sid="2145993407547296" title="Commented Out">
-            <sub-events>
-                <event-block sid="7495699710654755">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="9993173394840656" type="Player">
-                            <param id="0" name="Object">CenterSpikes</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="7213960269683627" type="System">
-                            <param id="0" name="Variable">Confidence</param>
-                            <param id="1" name="Value">20</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <variable comment="Keeps track of how long the main displayed piece of text has been onscreen" constant="0" name="TextDisplayTimer" sid="5681939896207478" static="0" type="number">0</variable>
-                <event-block sid="4378863871672061">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="4560305666095496" type="System">
-                            <param id="0" name="Variable">TextDisplayTimer</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">time - 5</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="1190236007306877" type="System">
-                            <param id="0" name="Variable">DisplayingText</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;True&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="3901741307214758" type="TextBackdrop">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5341530599109464" type="ScriptText">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1964976589869389" type="System">
-                            <param id="0" name="Variable">DisplayingText</param>
-                            <param id="1" name="Value">&quot;False&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5071859030175573">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="9644219420075356" type="Player">
-                            <param id="0" name="Object">ScriptTrigger</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8023825360579733" type="ScriptTrigger">
-                            <param id="0" name="Instance variable">Activated</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="1136688688435662" type="ScriptText">
-                            <param id="0" name="Text">ScriptTrigger.Text</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="5616063683637397" type="ScriptTrigger">
-                            <param id="0" name="Instance variable">Activated</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="1768306177640089" type="System">
-                            <param id="0" name="Variable">DisplayingText</param>
-                            <param id="1" name="Value">&quot;True&quot;</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <comment>But if its text needs to be multi-line (i.e. with line breaks), we use its ScriptKey to find a string in TextScriptMap that we set at the start of the layout</comment>
-                        <event-block sid="3278093027036478">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7110073922565334" type="ScriptTrigger">
-                                    <param id="0" name="Instance variable">ScriptKey</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">&quot;&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="6919540941929419" type="ScriptText">
-                                    <param id="0" name="Text">TextScriptMap.Get(ScriptTrigger.ScriptKey)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-block sid="5140614726510509">
             <conditions>
                 <condition id="1" inverted="1" name="Is overlapping another object" sid="1338646270469681" type="Player">
@@ -1064,14 +789,72 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <comment>To make sure the bubble goes in front of all but the solid tiles</comment>
-        <event-block sid="9559826161518046">
+        <event-block sid="1183622415290098">
             <conditions>
-                <condition id="-2" name="On start of layout" sid="890562616841469" type="System" />
+                <condition id="1" name="Is overlapping another object" sid="2352365006214454" type="Player">
+                    <param id="0" name="Object">CenterSpikes</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
-                <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
+                <action id="-11" name="Subtract from" sid="6429546522062424" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9217506846449687">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="6665991647110402" type="Player">
+                    <param id="0" name="Object">CenterSpikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="5916660136706423" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3080549685879914">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="2223387356998855" type="Player">
+                    <param id="0" name="Object">LeftSpikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="7201764404905929" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2416033032541406">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="9569555948021257" type="Player">
+                    <param id="0" name="Object">RightSpikes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="3858005638885037" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7760684147828902">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="759684978262668" type="Player">
+                    <param id="0" name="Object">LevelChangeTrigger</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="2037519525975998" type="System">
+                    <param id="0" name="Layout">LevelChangeTrigger.LeadsTo</param>
+                </action>
+                <action id="-9" name="Set value" sid="1294819686541178" type="System">
+                    <param id="0" name="Variable">FallFromTop</param>
+                    <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>

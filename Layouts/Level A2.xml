@@ -136,8 +136,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1088</x>
-                        <y>352</y>
+                        <x>1087.001098633</x>
+                        <y>383.500427246</y>
                         <z>0</z>
                         <width>64</width>
                         <height>32</height>
@@ -146,33 +146,6 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="JumpThruTile" uid="108">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Jumpthru">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1248</x>
-                        <y>416</y>
-                        <z>0</z>
-                        <width>96</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0.800000012</opacity>
                     </world>
                 </instance>
                 <instance type="CenterSpikes" uid="79">
@@ -721,7 +694,7 @@
                     <instance-variables>
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
-                        <Text>There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&apos; - Father H</Text>
+                        <Text>&apos;There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&apos; - Father H</Text>
                         <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

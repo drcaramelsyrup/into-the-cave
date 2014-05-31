@@ -346,7 +346,7 @@
                     <instance-variables>
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
-                        <Text>&apos;Next fundamental thing to remember is that you use the up arrow to jump&apos;</Text>
+                        <Text>&apos;Next fundamental thing to remember is that you use the up arrow to jump.&apos;</Text>
                         <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
