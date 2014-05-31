@@ -55,7 +55,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <LeadsTo>Level A5</LeadsTo>
+                        <LeadsTo>Level A2</LeadsTo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -402,8 +402,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-56</x>
-                        <y>258</y>
+                        <x>-50</x>
+                        <y>259</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>

@@ -12,13 +12,15 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout>Layout 1</layout>
         <layout>Level A1</layout>
-        <layout>Stereotype Threat</layout>
+        <layout active="1">Stereotype Threat</layout>
         <layout>Template</layout>
         <layout>Level A4</layout>
-        <layout active="1">Level A5</layout>
+        <layout>Level A5</layout>
         <layout>Level A2</layout>
         <layout>Level A3</layout>
         <layout>Level B1</layout>
+        <layout>Level B2</layout>
+        <layout>Level B3</layout>
         <event-sheet>Event sheet 1</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
     </open-tabs>
