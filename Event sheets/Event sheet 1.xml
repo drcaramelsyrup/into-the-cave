@@ -595,6 +595,14 @@
                     <param id="0" name="Key">&quot;Level A3 Start&quot;</param>
                     <param id="1" name="Value">&quot;Not all doors are open to you yet - for one thing, access to some rooms requires a key... -Father H&quot;</param>
                 </action>
+                <action id="0" name="Add key" sid="9862869336649597" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A4 Start&quot;</param>
+                    <param id="1" name="Value">&quot;An elevator! I wonder if I can make use of that.&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="9468569074583213" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A5 Start&quot;</param>
+                    <param id="1" name="Value">&quot;That... was disappointing.&quot;</param>
+                </action>
                 <action id="0" name="Add key" sid="6587192187194758" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B1 Start&quot;</param>
                     <param id="1" name="Value">&quot;Hey, that&apos;s V over there! Wait... what&apos;s that blue thing?&quot;</param>
@@ -606,10 +614,6 @@
                 <action id="0" name="Add key" sid="7112955970850384" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B3 Start&quot;</param>
                     <param id="1" name="Value">&quot;...&quot;</param>
-                </action>
-                <action id="0" name="Add key" sid="9862869336649597" type="TextScriptMap">
-                    <param id="0" name="Key">&quot;Level C1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;An elevator! I wonder if I can make use of that.&quot;</param>
                 </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
