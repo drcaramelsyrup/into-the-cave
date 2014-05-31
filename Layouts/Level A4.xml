@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BackgroundTile" uid="175">
+                <instance type="BackgroundTile2" uid="175">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -212,7 +212,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <LeadsTo>Level</LeadsTo>
+                        <LeadsTo>Level A5</LeadsTo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

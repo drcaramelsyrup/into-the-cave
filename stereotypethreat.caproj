@@ -655,9 +655,18 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BackgroundTile2" sid="1565652025837017">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="VillageBG" sid="9244066975780396">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
+        <layout>Prologue.xml</layout>
         <layout>Level A1.xml</layout>
         <layout>Level A2.xml</layout>
         <layout>Level A3.xml</layout>
@@ -673,6 +682,7 @@
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
         <event-sheet>Event sheet 2.xml</event-sheet>
+        <event-sheet>Narrative.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="20" />

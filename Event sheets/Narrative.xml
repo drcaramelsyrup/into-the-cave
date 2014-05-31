@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Narrative</name>
+    <events>
+        <variable constant="0" name="CurrentScript" sid="1801811314747519" static="0" type="number">0</variable>
+        <event-block sid="4160448152408819">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6398774610985147" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="9960197872803337" type="TextScriptMap">
+                    <param id="0" name="Key">CurrentScript</param>
+                    <param id="1" name="Value">&quot;nextText&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="740871375097006">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5410406206383134" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="1592022058335468" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="3969494000789714" type="ScriptText">
+                    <param id="0" name="Text">TextScriptMap.Get(CurrentScript)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6466703953292689">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9911501869687781" type="System">
+                            <param id="0" name="Variable">CurrentScript</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5540310271359553" type="System">
+                            <param id="0" name="Layout">Level A1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
