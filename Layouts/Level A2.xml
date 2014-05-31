@@ -72,7 +72,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Spikes" uid="49">
+                <instance type="CenterSpikes" uid="49">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -82,14 +82,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>992</x>
-                        <y>608</y>
+                        <x>990.999511719</x>
+                        <y>609.49987793</y>
                         <z>0</z>
-                        <width>96</width>
-                        <height>31</height>
+                        <width>25.427026749</width>
+                        <height>33.90625</height>
                         <depth>0</depth>
-                        <hotspotX>0.502702713</hotspotX>
-                        <hotspotY>0.9375</hotspotY>
+                        <hotspotX>0.510204077</hotspotX>
+                        <hotspotY>1.028571486</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -173,6 +173,94 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>0.800000012</opacity>
+                    </world>
+                </instance>
+                <instance type="CenterSpikes" uid="79">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1015.999511719</x>
+                        <y>609.49987793</y>
+                        <z>0</z>
+                        <width>25.427026749</width>
+                        <height>33.90625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.510204077</hotspotX>
+                        <hotspotY>1.028571486</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CenterSpikes" uid="127">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1040.999755859</x>
+                        <y>609.498779297</y>
+                        <z>0</z>
+                        <width>25.427026749</width>
+                        <height>33.90625</height>
+                        <depth>0</depth>
+                        <hotspotX>0.510204077</hotspotX>
+                        <hotspotY>1.028571486</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LeftSpikes" uid="128">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>966.824645996</x>
+                        <y>607.287780762</y>
+                        <z>0</z>
+                        <width>25.152694702</width>
+                        <height>31.890024185</height>
+                        <depth>0</depth>
+                        <hotspotX>0.553571403</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RightSpikes" uid="129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1061.784179688</x>
+                        <y>608.875610352</y>
+                        <z>0</z>
+                        <width>18.753587723</width>
+                        <height>29.469923019</height>
+                        <depth>0</depth>
+                        <hotspotX>0.476190478</hotspotX>
+                        <hotspotY>1.015151501</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="ConfidenceBubble" uid="87">
@@ -611,14 +699,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>288</x>
-                        <y>608</y>
+                        <x>287</x>
+                        <y>609</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>26.070554733</width>
+                        <height>36.899864197</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotX>0.676923096</hotspotX>
+                        <hotspotY>0.532608688</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -633,7 +721,7 @@
                     <instance-variables>
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
-                        <Text>There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&apos; - Prof H</Text>
+                        <Text>There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&apos; - Father H</Text>
                         <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

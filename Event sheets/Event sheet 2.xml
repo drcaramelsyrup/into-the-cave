@@ -2,5 +2,207 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 2</name>
-    <events />
+    <events>
+        <variable comment="When the elevator takes off" constant="0" name="ElevatorTakeoffTime" sid="2089642288326195" static="0" type="number">3.5</variable>
+        <include>Event sheet 1</include>
+        <event-block sid="6144093560107562">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5123983637774635" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="1138574965193055">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="9352006351333205" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3130601631909604" type="STTrigger">
+                    <param id="0" name="Object">MaleExplorer</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2941252341985351">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6868169590809654" type="MaleExplorer">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Bob&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6865034118327655">
+                    <conditions>
+                        <condition id="-7" name="Compare time" sid="5807594651044858" type="System">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Time (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-7" name="Compare time" sid="211105616391879" type="System">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Time (seconds)">1.9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1779527249867294" type="MaleExplorer">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6094257810939071">
+                    <conditions>
+                        <condition id="-7" name="Compare time" sid="979205248163252" type="System">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Time (seconds)">1.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="2639783736534044" type="MaleExplorer">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4868879023157156">
+                    <conditions>
+                        <condition id="-7" name="Compare time" sid="5272815097744059" type="System">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Time (seconds)">ElevatorTakeoffTime + 2.5</param>
+                        </condition>
+                        <condition id="-7" name="Compare time" sid="7382737012728844" type="System">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Time (seconds)">ElevatorTakeoffTime + 2.8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1443063763155123" type="MaleExplorer">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="588560404260096">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="6712691171650816" type="MaleExplorer">
+                    <param id="0" name="Instance variable">Name</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Charles&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5357823478369764">
+                    <conditions>
+                        <condition id="-7" name="Compare time" sid="7116096493890879" type="System">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Time (seconds)">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare time" sid="2117816143260946" type="System">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Time (seconds)">2.7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1062980074589677" type="MaleExplorer">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1451880830791522">
+                    <conditions>
+                        <condition id="-7" name="Compare time" sid="9334349358607713" type="System">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Time (seconds)">2.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="3166732866396845" type="MaleExplorer">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1653262355495604">
+                    <conditions>
+                        <condition id="-7" name="Compare time" sid="7469744767771529" type="System">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Time (seconds)">ElevatorTakeoffTime + 3</param>
+                        </condition>
+                        <condition id="-7" name="Compare time" sid="6901842877114112" type="System">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Time (seconds)">ElevatorTakeoffTime + 3.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="6120106161708729" type="MaleExplorer">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7985770606515212">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="3412789278409255" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">ElevatorTakeoffTime</param>
+                </condition>
+                <condition id="-7" name="Compare time" sid="2464992928316203" type="System">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Time (seconds)">ElevatorTakeoffTime+1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ElevatorMovement" id="3" name="Accelerate" sid="570243899533228" type="Elevator">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">-100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4787486858495707">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="1364987459100843" type="System">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Time (seconds)">ElevatorTakeoffTime+1.75</param>
+                </condition>
+                <condition id="-7" name="Compare time" sid="3979301213316046" type="System">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Time (seconds)">ElevatorTakeoffTime+2.75</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ElevatorMovement" id="3" name="Accelerate" sid="6497052880818137" type="Elevator">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1578740146847665">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="4885503122759416" type="System">
+                    <param id="0" name="First value">distance(Player.X, Player.Y, Elevator.X, Elevator.Y)</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Second value">300</param>
+                </condition>
+                <condition behavior="ElevatorMovement" id="0" inverted="1" name="Is moving" sid="4970922973970844" type="Elevator" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9922618464601438" type="System">
+                    <param id="0" name="Variable">ElevatorTakeoffTime</param>
+                    <param id="1" name="Value">time + 0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="953892591700196">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="61568366144042" type="System">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Time (seconds)">ElevatorTakeoffTime + 4.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2339939038338313" type="MaleExplorer" />
+                <action id="-9" name="Destroy" sid="4338842856890037" type="STTrigger" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>
