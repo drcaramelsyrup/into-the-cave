@@ -447,7 +447,7 @@
                     <param id="0" name="Max fall speed">STFallSpeed</param>
                 </action>
                 <action id="-16" name="Set opacity" sid="5617973981376829" type="STOverlay">
-                    <param id="0" name="Opacity">STOverlay.Opacity+10</param>
+                    <param id="0" name="Opacity">STOverlay.Opacity+12</param>
                 </action>
                 <action id="4" name="Set animation" sid="9710350827151247" type="CenterSpikes">
                     <param id="0" name="Animation">&quot;Watching&quot;</param>
@@ -884,6 +884,17 @@
                 <action id="-9" name="Set value" sid="1294819686541178" type="System">
                     <param id="0" name="Variable">FallFromTop</param>
                     <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6422088845480998">
+            <conditions>
+                <condition id="-18" name="On created" sid="5390465966137867" type="MaleExplorer" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="6054195918544817" type="HugeConfidenceBubble">
+                    <param id="0" name="Pin to">MaleExplorer</param>
+                    <param id="1" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>

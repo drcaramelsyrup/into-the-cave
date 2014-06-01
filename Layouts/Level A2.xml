@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BackgroundTile" uid="42">
+                <instance type="BackgroundTile2" uid="42">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -43,6 +43,31 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HugeConfidenceBubble" uid="431">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>198</x>
+                        <y>474</y>
+                        <z>0</z>
+                        <width>350</width>
+                        <height>350</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -254,6 +279,97 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ScriptTrigger" uid="428">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ScriptKey></ScriptKey>
+                        <Activated>false</Activated>
+                        <Text>&quot;Your shield device slowly regenerates energy. You&apos;ll notice as you go from passage to passage.&quot; - Prof. H</Text>
+                        <Image></Image>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>390</x>
+                        <y>254</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ThoughtBubbleTail" uid="429">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>388.967895508</x>
+                        <y>243.486022949</y>
+                        <z>0</z>
+                        <width>38</width>
+                        <height>11</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.029999999</hotspotX>
+                        <hotspotY>0.550000012</hotspotY>
+                        <angle>1.508415461</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MaleExplorer" uid="430">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Dialogue1></Dialogue1>
+                        <Dialogue2></Dialogue2>
+                        <Name>Bob</Name>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>330</max-speed>
+                                <acceleration>1500</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>194</x>
+                        <y>486</y>
+                        <z>0</z>
+                        <width>21.35972023</width>
+                        <height>47.940704346</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.504950523</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -694,7 +810,7 @@
                     <instance-variables>
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
-                        <Text>&apos;There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&apos; - Father H</Text>
+                        <Text>&quot;There will be thorny patches in the cave. Most explorers aren&apos;t bothered by them too much. Some even enjoy having them around, probably as a way of weeding out overly-sensitive newbies. As long as you have your shield, you&apos;ll be fine.&quot; - Father H</Text>
                         <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

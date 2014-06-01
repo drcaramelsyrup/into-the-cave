@@ -217,14 +217,14 @@
                     <instance-variables>
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
-                        <Text>&apos;Next fundamental thing to remember is that you use the up arrow to jump&apos;</Text>
+                        <Text>... umm... how am I supposed to...</Text>
                         <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>544</y>
+                        <x>1216</x>
+                        <y>288</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -292,8 +292,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>544</x>
-                        <y>530</y>
+                        <x>1214</x>
+                        <y>277</y>
                         <z>0</z>
                         <width>37.5</width>
                         <height>11</height>
@@ -329,6 +329,31 @@
                         <depth>0</depth>
                         <hotspotX>0.503311276</hotspotX>
                         <hotspotY>0.92413795</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SubDoor" uid="418">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <LeadsTo>Level B1</LeadsTo>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1920</x>
+                        <y>128</y>
+                        <z>0</z>
+                        <width>63.905208588</width>
+                        <height>73.345748901</height>
+                        <depth>0</depth>
+                        <hotspotX>0.477272719</hotspotX>
+                        <hotspotY>0.564356446</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1639,31 +1664,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SubDoor" uid="418">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <LeadsTo>Level B1</LeadsTo>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1920</x>
-                        <y>128</y>
-                        <z>0</z>
-                        <width>63.905208588</width>
-                        <height>73.345748901</height>
-                        <depth>0</depth>
-                        <hotspotX>0.477272719</hotspotX>
-                        <hotspotY>0.564356446</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

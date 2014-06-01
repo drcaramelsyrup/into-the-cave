@@ -22,6 +22,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
@@ -162,7 +163,18 @@
             <plugin id="Sprite" />
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7423127183004546" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.248" y="0.248" />
+                            <point x="0.5" y="0.168" />
+                            <point x="0.72" y="0.28" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.716" y="0.716" />
+                            <point x="0.5" y="0.772" />
+                            <point x="0.272" y="0.728" />
+                            <point x="0.164" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -523,9 +535,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Array" sid="9348708050467477">
-            <plugin id="Arr" />
-        </object-type>
         <object-type name="MaleExplorer" sid="6833833561701239">
             <plugin id="Sprite" />
             <instance-variables>
@@ -662,6 +671,33 @@
         <object-type name="VillageBG" sid="9244066975780396">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type global="1" name="NarrativeArray" sid="4488951327939243">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="HugeConfidenceBubble" sid="3681732677537585">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="1628304183312205">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7394363431232717" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.245714" y="0.245714" />
+                            <point x="0.5" y="0.168571" />
+                            <point x="0.72" y="0.28" />
+                            <point x="0.78" y="0.5" />
+                            <point x="0.714286" y="0.714286" />
+                            <point x="0.5" y="0.771429" />
+                            <point x="0.271429" y="0.728571" />
+                            <point x="0.162857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
