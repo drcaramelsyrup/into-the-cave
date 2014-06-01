@@ -20,8 +20,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Level B3</layout>
         <layout>Prologue</layout>
         <layout>Level A1</layout>
-        <layout>Level C1</layout>
         <layout>Level A6</layout>
+        <layout>Level C1</layout>
         <event-sheet active="1">Event sheet 1</event-sheet>
         <event-sheet>Narrative</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>

@@ -597,6 +597,9 @@
         </object-type>
         <object-type name="FallingTile" sid="7092673375686728">
             <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="time_since_collision" sid="8084216629739846" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="1874074184580842">
                     <behavior id="solid" />

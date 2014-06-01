@@ -7,16 +7,6 @@
         <variable constant="0" name="Confidence" sid="261748409792726" static="0" type="number">100</variable>
         <variable comment="For playtesting - strength, gravity, speed, etc" constant="0" name="StereotypeThreatMode" sid="384432846556123" static="0" type="text"></variable>
         <comment>Use the down arrow to allow the player to deliberately drop down through a jump-thru platform.</comment>
-        <event-block sid="7183131882963017">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="690991993169281" type="Keyboard">
-                    <param id="0" name="Key">40 (Down arrow)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Platform" id="12" name="Fall through" sid="4923350319068316" type="Player" />
-            </actions>
-        </event-block>
         <event-block sid="4937441876236133">
             <conditions>
                 <condition behavior="Platform" id="3" name="Is jumping" sid="7585992242517911" type="Player" />
@@ -315,6 +305,11 @@
                 <condition id="1" name="Is overlapping another object" sid="3857188139758771" type="Player">
                     <param id="0" name="Object">Healer</param>
                 </condition>
+                <condition id="-14" name="Compare variable" sid="7964013611458537" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">100</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-10" name="Add to" sid="494310611197653" type="System">
@@ -324,21 +319,6 @@
                 <action id="-9" name="Set value" sid="2081431250710271" type="System">
                     <param id="0" name="Variable">StereotypeThreat</param>
                     <param id="1" name="Value">&quot;Off&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2677604466105685">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="7964013611458537" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">100</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="8838021388109362" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">100</param>
                 </action>
             </actions>
         </event-block>
@@ -882,58 +862,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="1183622415290098">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="2352365006214454" type="Player">
-                    <param id="0" name="Object">CenterSpikes</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="6429546522062424" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="9217506846449687">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="6665991647110402" type="Player">
-                    <param id="0" name="Object">CenterSpikes</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="5916660136706423" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3080549685879914">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="2223387356998855" type="Player">
-                    <param id="0" name="Object">LeftSpikes</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="7201764404905929" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="2416033032541406">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="9569555948021257" type="Player">
-                    <param id="0" name="Object">RightSpikes</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="3858005638885037" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="7760684147828902">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="759684978262668" type="Player">
@@ -961,6 +889,46 @@
                     <param id="1" name="Mode">0</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="4595507097878133">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9371537711416571" type="FallingTile">
+                    <param id="0" name="Instance variable">time_since_collision</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="3" name="Accelerate" sid="8622431766656084" type="FallingTile">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Acceleration">2000</param>
+                </action>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="8832498741402782" type="FallingTile">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">300</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3060159350278507">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9501378637540404" type="Player">
+                    <param id="0" name="Object">FallingTile</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5317611747879081">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="3164806261957821" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="9003082360676554" type="FallingTile">
+                            <param id="0" name="Instance variable">time_since_collision</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
