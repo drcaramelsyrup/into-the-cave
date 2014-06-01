@@ -22,9 +22,11 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -606,6 +608,12 @@
                 </behavior-type>
                 <behavior-type name="CustomMovement" sid="7939063660467537">
                     <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="8721581939023201">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="8230753005015184">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <texture />
