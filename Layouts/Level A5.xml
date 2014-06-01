@@ -5,7 +5,7 @@
     <event-sheet>Event sheet 1</event-sheet>
     <size>
         <width>2016</width>
-        <height>510</height>
+        <height>606</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -341,7 +341,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <LeadsTo>Level B1</LeadsTo>
+                        <LeadsTo>Level A6</LeadsTo>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -507,7 +507,7 @@
                         <y>448</y>
                         <z>0</z>
                         <width>640</width>
-                        <height>64</height>
+                        <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -561,7 +561,7 @@
                         <y>480</y>
                         <z>0</z>
                         <width>1376</width>
-                        <height>32</height>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -1770,6 +1770,33 @@
                         <depth>0</depth>
                         <hotspotX>-0.0078125</hotspotX>
                         <hotspotY>0.984375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SolidTile" uid="438">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>32</x>
+                        <y>416</y>
+                        <z>0</z>
+                        <width>224</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

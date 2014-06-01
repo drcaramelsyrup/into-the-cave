@@ -538,6 +538,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9238026443123826">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="5927722267053605" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="1" name="Is overlapping another object" sid="4911696599549181" type="Player">
+                    <param id="0" name="Object">Porthole</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="9667180800655169" type="Player">
+                    <param id="0" name="X">Porthole.NextPositionX</param>
+                </action>
+                <action id="-2" name="Set Y" sid="1460900062343471" type="Player">
+                    <param id="0" name="Y">Porthole.NextPositionY</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>Keys and locks</comment>
         <event-block sid="4711074655388404">
             <conditions>
@@ -576,6 +594,43 @@
                 <action id="-9" name="Destroy" sid="4020558458793021" type="Key" />
             </actions>
         </event-block>
+        <event-block sid="3203069995342753">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="9724271392063132" type="Key2">
+                    <param id="0" name="Instance variable">PickedUp</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="458302101366385" type="Key2">
+                    <param id="0" name="Object">Player</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6691881349849784">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="1478085930951272" type="Player">
+                    <param id="0" name="Object">Key2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="6658016639763123" type="Key2">
+                    <param id="0" name="Instance variable">PickedUp</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6630466478530813">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6414323148608008" type="Key2">
+                    <param id="0" name="Object">Lock2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1161558103551753" type="Lock2" />
+                <action id="-9" name="Destroy" sid="7212249077319608" type="Key2" />
+            </actions>
+        </event-block>
         <variable comment="Whether we&apos;re displaying text or not" constant="0" name="DisplayingText" sid="9430502538177119" static="0" type="text">False</variable>
         <comment>Setting the text at the start of the level and making sure the confidence bubble is in front of all but the solid tiles</comment>
         <event-block sid="8971721187247068">
@@ -585,7 +640,7 @@
             <actions>
                 <action id="0" name="Add key" sid="4252458096880545" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Father H&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Father H. Father H is a great teacher, but he&apos;s way too worried. There&apos;s no need to get upset over me!&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="7243528591470964" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A2 Start&quot;</param>
@@ -602,6 +657,10 @@
                 <action id="0" name="Add key" sid="9468569074583213" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A5 Start&quot;</param>
                     <param id="1" name="Value">&quot;That... was disappointing.&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="4715719614590769" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level A6 Start&quot;</param>
+                    <param id="1" name="Value">&quot;That was really close. This is getting to be more than I thought...&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="6587192187194758" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B1 Start&quot;</param>

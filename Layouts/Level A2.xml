@@ -374,6 +374,56 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ScriptTrigger" uid="444">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ScriptKey></ScriptKey>
+                        <Activated>false</Activated>
+                        <Text>... whatever. V&apos;s always been a little rude.</Text>
+                        <Image></Image>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>636</x>
+                        <y>575</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ThoughtBubbleTail" uid="445">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>633</x>
+                        <y>570</y>
+                        <z>0</z>
+                        <width>37.5</width>
+                        <height>11</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.029999999</hotspotX>
+                        <hotspotY>0.550000012</hotspotY>
+                        <angle>1.508415461</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

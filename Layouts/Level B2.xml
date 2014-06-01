@@ -1410,10 +1410,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2</x>
+                        <x>-2</x>
                         <y>-1</y>
                         <z>0</z>
-                        <width>638</width>
+                        <width>642</width>
                         <height>482</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

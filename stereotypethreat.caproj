@@ -699,6 +699,42 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Porthole" sid="5099222963948624">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="NextPositionX" sid="5146875673201282" type="number" />
+                <instance-variable name="NextPositionY" sid="8246529588957879" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2887553028568139" speed="5">
+                    <frame duration="1" hotspotX="0.477273" hotspotY="0.564356" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Key2" sid="7416404072902137">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Whether to follow the player" name="PickedUp" sid="2941476556840583" type="boolean" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9476667635160177" speed="5">
+                    <frame duration="1" hotspotX="-0.0078125" hotspotY="0.984375" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Lock2" sid="5355664314317527">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="3913423941915227">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5883546068739742" speed="5">
+                    <frame duration="1" hotspotX="0.503311" hotspotY="0.924138" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -708,9 +744,11 @@
         <layout>Level A3.xml</layout>
         <layout>Level A4.xml</layout>
         <layout>Level A5.xml</layout>
+        <layout>Level A6.xml</layout>
         <layout>Level B1.xml</layout>
         <layout>Level B2.xml</layout>
         <layout>Level B3.xml</layout>
+        <layout>Level C1.xml</layout>
         <layout>Layout 1.xml</layout>
         <layout>Stereotype Threat.xml</layout>
         <layout>Template.xml</layout>
