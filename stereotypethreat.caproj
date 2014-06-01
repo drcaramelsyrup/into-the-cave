@@ -595,11 +595,14 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="SolidTile2" sid="7092673375686728">
+        <object-type name="FallingTile" sid="7092673375686728">
             <plugin id="TiledBg" />
             <behaviors>
                 <behavior-type name="Solid" sid="1874074184580842">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="7939063660467537">
+                    <behavior id="custom" />
                 </behavior-type>
             </behaviors>
             <texture />

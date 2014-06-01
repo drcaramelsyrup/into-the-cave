@@ -674,6 +674,10 @@
                     <param id="0" name="Key">&quot;Level B3 Start&quot;</param>
                     <param id="1" name="Value">&quot;...&quot;</param>
                 </action>
+                <action id="0" name="Add key" sid="154883615233891" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level C1 Start&quot;</param>
+                    <param id="1" name="Value">&quot;You can&apos;t count on anyone being there for you, I guess.&quot;</param>
+                </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
                 <action id="0" name="Set text" sid="6063147676240336" type="ScriptText">
@@ -891,7 +895,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9217506846449687">
+        <event-block any="1" sid="9217506846449687">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="6665991647110402" type="Player">
                     <param id="0" name="Object">CenterSpikes</param>
@@ -917,7 +921,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2416033032541406">
+        <event-block any="1" sid="2416033032541406">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="9569555948021257" type="Player">
                     <param id="0" name="Object">RightSpikes</param>
@@ -946,6 +950,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>To add the male explorer&apos;s large confidence bubble. TODO: right now it only attaches to one explorer?</comment>
         <event-block sid="6422088845480998">
             <conditions>
                 <condition id="-18" name="On created" sid="5390465966137867" type="MaleExplorer" />
