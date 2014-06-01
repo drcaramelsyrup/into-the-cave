@@ -11,7 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Template</layout>
-        <layout>Level A4</layout>
+        <layout active="1">Level A4</layout>
         <layout>Level A5</layout>
         <layout>Level A2</layout>
         <layout>Level A3</layout>

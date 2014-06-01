@@ -741,6 +741,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="SingleSpikes" sid="1404478351705663">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4837338774916096" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.01429">
+                        <collision-poly>
+                            <point x="0.291667" y="0.2" />
+                            <point x="0.5" y="0.457143" />
+                            <point x="0.666667" y="0.228571" />
+                            <point x="0.958333" y="0.5" />
+                            <point x="0.9375" y="0.957143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0416667" y="0.971429" />
+                            <point x="0.0416667" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
