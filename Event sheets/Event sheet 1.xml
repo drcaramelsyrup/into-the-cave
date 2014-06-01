@@ -140,9 +140,6 @@
                 <condition id="0" name="On key pressed" sid="6164485483284805" type="Keyboard">
                     <param id="0" name="Key">37 (Left arrow)</param>
                 </condition>
-                <condition id="0" name="On key pressed" sid="2620991451179304" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="2108585279628952" type="Player">
@@ -154,9 +151,6 @@
             <conditions>
                 <condition id="0" name="On key pressed" sid="8845035353561981" type="Keyboard">
                     <param id="0" name="Key">39 (Right arrow)</param>
-                </condition>
-                <condition id="0" name="On key pressed" sid="5099124472990385" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
                 </condition>
             </conditions>
             <actions>
