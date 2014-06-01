@@ -892,8 +892,10 @@
         </event-block>
         <event-block sid="4595507097878133">
             <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="9371537711416571" type="FallingTile">
-                    <param id="0" name="Tag">&quot;once_collided&quot;</param>
+                <condition id="-7" name="Compare instance variable" sid="9371537711416571" type="FallingTile">
+                    <param id="0" name="Instance variable">time_since_collision</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
                 </condition>
             </conditions>
             <actions>
@@ -903,7 +905,7 @@
                 </action>
                 <action behavior="CustomMovement" id="2" name="Set speed" sid="8832498741402782" type="FallingTile">
                     <param id="0" name="Which">2</param>
-                    <param id="1" name="Speed">500</param>
+                    <param id="1" name="Speed">300</param>
                 </action>
             </actions>
         </event-block>
@@ -913,18 +915,20 @@
                     <param id="0" name="Object">FallingTile</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="Timer" id="0" name="Start timer" sid="668059008625391" type="FallingTile">
-                    <param id="0" name="Duration">0.5</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;once_collided&quot;</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="860201484126766" type="FallingTile">
-                    <param id="0" name="&apos;On&apos; time">0.05</param>
-                    <param id="1" name="&apos;Off&apos; time">0.05</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="5317611747879081">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="3164806261957821" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="9003082360676554" type="FallingTile">
+                            <param id="0" name="Instance variable">time_since_collision</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

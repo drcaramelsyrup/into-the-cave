@@ -22,11 +22,9 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -609,12 +607,6 @@
                 <behavior-type name="CustomMovement" sid="7939063660467537">
                     <behavior id="custom" />
                 </behavior-type>
-                <behavior-type name="Timer" sid="8721581939023201">
-                    <behavior id="Timer" />
-                </behavior-type>
-                <behavior-type name="Flash" sid="8230753005015184">
-                    <behavior id="Flash" />
-                </behavior-type>
             </behaviors>
             <texture />
         </object-type>
@@ -746,6 +738,25 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5883546068739742" speed="5">
                     <frame duration="1" hotspotX="0.503311" hotspotY="0.924138" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SingleSpikes" sid="1404478351705663">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4837338774916096" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1.01429">
+                        <collision-poly>
+                            <point x="0.291667" y="0.2" />
+                            <point x="0.5" y="0.457143" />
+                            <point x="0.666667" y="0.228571" />
+                            <point x="0.958333" y="0.5" />
+                            <point x="0.9375" y="0.957143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0416667" y="0.971429" />
+                            <point x="0.0416667" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

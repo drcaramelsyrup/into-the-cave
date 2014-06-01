@@ -11,7 +11,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Template</layout>
-        <layout>Level A4</layout>
+        <layout active="1">Level A4</layout>
         <layout>Level A5</layout>
         <layout>Level A2</layout>
         <layout>Level A3</layout>
@@ -22,7 +22,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Level A1</layout>
         <layout>Level A6</layout>
         <layout>Level C1</layout>
-        <event-sheet active="1">Event sheet 1</event-sheet>
+        <event-sheet>Event sheet 1</event-sheet>
         <event-sheet>Narrative</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
     </open-tabs>
