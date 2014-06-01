@@ -22,9 +22,11 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Anchor" version="1">Anchor</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -68,6 +70,7 @@
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1090271156040066" speed="5">
                     <frame duration="1" hotspotX="0.676923" hotspotY="0.532609">
+                        <image-point name="Carrying" x="1.21538" y="0.413043" />
                         <collision-poly>
                             <point x="0.23077" y="0" />
                             <point x="1" y="0" />
@@ -78,6 +81,7 @@
                 </animation>
                 <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="1217099409951518" speed="5">
                     <frame duration="1" hotspotX="0.526316" hotspotY="0.565217">
+                        <image-point name="Carrying" x="1.15789" y="0.423913" />
                         <collision-poly>
                             <point x="0.263158" y="0" />
                             <point x="0.868421" y="0.0108696" />
@@ -86,6 +90,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.657895" hotspotY="0.543478">
+                        <image-point name="Carrying" x="1.15789" y="0.423913" />
                         <collision-poly>
                             <point x="0.302632" y="0" />
                             <point x="0.881579" y="0.0108696" />
@@ -95,6 +100,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.631579" hotspotY="0.554348">
+                        <image-point name="Carrying" x="1.15789" y="0.423913" />
                         <collision-poly>
                             <point x="0.289474" y="0.0108696" />
                             <point x="0.828947" y="0.0108696" />
@@ -103,6 +109,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.605263" hotspotY="0.532609">
+                        <image-point name="Carrying" x="1.15789" y="0.423913" />
                         <collision-poly>
                             <point x="0.868421" y="0.0108696" />
                             <point x="0.276316" y="0.0108696" />
@@ -113,6 +120,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="4065194432292555" speed="5">
                     <frame duration="1" hotspotX="0.565789" hotspotY="0.5">
+                        <image-point name="Carrying" x="1.15789" y="0.430233" />
                         <collision-poly>
                             <point x="0.236842" y="0" />
                             <point x="0.907895" y="0" />
@@ -370,14 +378,28 @@
         </object-type>
         <object-type name="Lock" sid="5720857177741855">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Color" sid="7365418373096959" type="string" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="5707051710184435">
                     <behavior id="solid" />
                 </behavior-type>
             </behaviors>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3071765689519856" speed="5">
-                    <frame duration="1" hotspotX="0.503311" hotspotY="0.924138" />
+                <animation framecount="1" loop="0" name="Yellow" pingpong="0" repeatcount="1" repeatto="0" sid="3071765689519856" speed="5">
+                    <frame duration="1" hotspotX="0.503311" hotspotY="0.924138">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.992188" y="0.991071" />
+                            <point x="0.5" y="0.883929" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Blue" pingpong="0" repeatcount="1" repeatto="0" sid="51916594219026" speed="5">
+                    <frame duration="1" hotspotX="0.490066" hotspotY="0.903448" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -385,10 +407,25 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable comment="Whether to follow the player" name="PickedUp" sid="7398738441441284" type="boolean" />
+                <instance-variable name="Color" sid="9401095315653536" type="string" />
             </instance-variables>
             <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3792561464553489" speed="5">
-                    <frame duration="1" hotspotX="-0.0078125" hotspotY="0.984375" />
+                <animation framecount="1" loop="0" name="Yellow" pingpong="0" repeatcount="1" repeatto="0" sid="3792561464553489" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.57">
+                        <collision-poly>
+                            <point x="0.129032" y="0.08" />
+                            <point x="0.483871" y="0" />
+                            <point x="0.870968" y="0.08" />
+                            <point x="0.612903" y="0.5" />
+                            <point x="0.806452" y="0.88" />
+                            <point x="0.483871" y="1" />
+                            <point x="0.387097" y="0.76" />
+                            <point x="0.387097" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Blue" pingpong="0" repeatcount="1" repeatto="0" sid="2372107992271707" speed="5">
+                    <frame duration="1" hotspotX="0.532258" hotspotY="0.58" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -598,7 +635,7 @@
         <object-type name="FallingTile" sid="7092673375686728">
             <plugin id="TiledBg" />
             <instance-variables>
-                <instance-variable name="time_since_collision" sid="8084216629739846" type="number" />
+                <instance-variable name="on_collided" sid="5809232684837251" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="1874074184580842">
@@ -606,6 +643,12 @@
                 </behavior-type>
                 <behavior-type name="CustomMovement" sid="7939063660467537">
                     <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="4179362399145508">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="4766859515052623">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <texture />
@@ -717,30 +760,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Key2" sid="7416404072902137">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="Whether to follow the player" name="PickedUp" sid="2941476556840583" type="boolean" />
-            </instance-variables>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9476667635160177" speed="5">
-                    <frame duration="1" hotspotX="-0.0078125" hotspotY="0.984375" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Lock2" sid="5355664314317527">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="3913423941915227">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder expanded="1">
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5883546068739742" speed="5">
-                    <frame duration="1" hotspotX="0.503311" hotspotY="0.924138" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="SingleSpikes" sid="1404478351705663">
             <plugin id="Sprite" />
             <animation-folder expanded="1">
@@ -760,6 +779,35 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="NarrativeEndTrigger" sid="8961161400332701">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="LeadsTo" sid="5956998945341804" type="string" />
+                <instance-variable name="EndIndex" sid="7999104825763127" type="number" />
+                <instance-variable name="StartIndex" sid="9025908940784072" type="number" />
+            </instance-variables>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1572530155861667" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Blackness" sid="4729721740745532">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="QuitButton" sid="9499899324461994">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Button3" sid="8997148218560345">
+            <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="Text" sid="6623298115211875" type="string" />
+            </instance-variables>
+        </object-type>
+        <object-type name="RetryButton" sid="3535871611460592">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -778,6 +826,8 @@
         <layout>Stereotype Threat.xml</layout>
         <layout>Template.xml</layout>
         <layout>Level C2.xml</layout>
+        <layout>Epilogue.xml</layout>
+        <layout>Death.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>

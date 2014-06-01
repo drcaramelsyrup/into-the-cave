@@ -82,22 +82,8 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="8610764941545121">
-                    <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="7681776272800917" type="MaleExplorer">
-                            <param id="0" name="Side">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1006983489018331" type="MaleExplorer">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="3325851255543898">
                     <conditions>
-                        <condition id="-22" name="Else" sid="2187879644249715" type="System" />
                         <condition behavior="Platform" id="10" name="Is by wall" sid="5856872379011285" type="MaleExplorer">
                             <param id="0" name="Side">0</param>
                         </condition>
@@ -168,7 +154,9 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="1948854674926905" type="System" />
+                <action id="-2" name="Go to layout" sid="1948854674926905" type="System">
+                    <param id="0" name="Layout">Death</param>
+                </action>
             </actions>
         </event-block>
         <variable comment="How long before taking another chunk of damage from spikes" constant="0" name="TimeOfLastDamage" sid="7607592607069084" static="0" type="number">0</variable>
@@ -193,6 +181,11 @@
                     <param id="0" name="Variable">TimeOfLastDamage</param>
                     <param id="1" name="Value">time</param>
                 </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="7937876608451314" type="Player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6605733224740455">
@@ -215,6 +208,11 @@
                     <param id="0" name="Variable">TimeOfLastDamage</param>
                     <param id="1" name="Value">time</param>
                 </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="6962443428420677" type="Player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5586328379240207">
@@ -236,6 +234,11 @@
                 <action id="-9" name="Set value" sid="4342413207781938" type="System">
                     <param id="0" name="Variable">TimeOfLastDamage</param>
                     <param id="1" name="Value">time</param>
+                </action>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="6945380479448039" type="Player">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>
@@ -326,10 +329,20 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-26" name="Restart layout" sid="331274872351265" type="System" />
                 <action id="-9" name="Set value" sid="9083223041244931" type="System">
                     <param id="0" name="Variable">Confidence</param>
                     <param id="1" name="Value">100</param>
+                </action>
+                <action id="-9" name="Set value" sid="7260499948734266" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="8990373241421433" type="System">
+                    <param id="0" name="Variable">PreviousLevel</param>
+                    <param id="1" name="Value">LayoutName</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="2167007734180719" type="System">
+                    <param id="0" name="Layout">Death</param>
                 </action>
             </actions>
         </event-block>
@@ -495,6 +508,10 @@
                 <action id="-25" name="Go to layout (by name)" sid="8103547399045372" type="System">
                     <param id="0" name="Layout">SuperDoor.LeadsTo</param>
                 </action>
+                <action id="-9" name="Set value" sid="2618123643855214" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">&quot;False&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9314183454976592">
@@ -509,6 +526,10 @@
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="125473783942328" type="System">
                     <param id="0" name="Layout">SubDoor.LeadsTo</param>
+                </action>
+                <action id="-9" name="Set value" sid="9311467310096519" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Value">&quot;False&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -540,7 +561,7 @@
             <actions>
                 <action id="-4" name="Set position to another object" sid="4103571985288914" type="Key">
                     <param id="0" name="Object">Player</param>
-                    <param id="1" name="Image point (optional)">0</param>
+                    <param id="1" name="Image point (optional)">1</param>
                 </action>
             </actions>
         </event-block>
@@ -562,47 +583,15 @@
                 <condition id="0" name="On collision with another object" sid="8910837532331525" type="Key">
                     <param id="0" name="Object">Lock</param>
                 </condition>
+                <condition id="-7" name="Compare instance variable" sid="2022529736165468" type="Lock">
+                    <param id="0" name="Instance variable">Color</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Key.Color</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="5984242031235999" type="Lock" />
                 <action id="-9" name="Destroy" sid="4020558458793021" type="Key" />
-            </actions>
-        </event-block>
-        <event-block sid="3203069995342753">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="9724271392063132" type="Key2">
-                    <param id="0" name="Instance variable">PickedUp</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-4" name="Set position to another object" sid="458302101366385" type="Key2">
-                    <param id="0" name="Object">Player</param>
-                    <param id="1" name="Image point (optional)">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6691881349849784">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1478085930951272" type="Player">
-                    <param id="0" name="Object">Key2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="6658016639763123" type="Key2">
-                    <param id="0" name="Instance variable">PickedUp</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6630466478530813">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="6414323148608008" type="Key2">
-                    <param id="0" name="Object">Lock2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="1161558103551753" type="Lock2" />
-                <action id="-9" name="Destroy" sid="7212249077319608" type="Key2" />
             </actions>
         </event-block>
         <variable comment="Whether we&apos;re displaying text or not" constant="0" name="DisplayingText" sid="9430502538177119" static="0" type="text">False</variable>
@@ -672,6 +661,14 @@
                 <action id="-3" name="Set position" sid="8137884636486693" type="ScriptText">
                     <param id="0" name="X">32</param>
                     <param id="1" name="Y">352</param>
+                </action>
+                <action id="4" name="Set animation" sid="7974388828104832" type="Key">
+                    <param id="0" name="Animation">Key.Color</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="199917762102696" type="Lock">
+                    <param id="0" name="Animation">Lock.Color</param>
+                    <param id="1" name="From">1</param>
                 </action>
             </actions>
         </event-block>
@@ -886,10 +883,8 @@
         </event-block>
         <event-block sid="4595507097878133">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="9371537711416571" type="FallingTile">
-                    <param id="0" name="Instance variable">time_since_collision</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">10</param>
+                <condition behavior="Timer" id="0" name="On timer" sid="2170667670308582" type="FallingTile">
+                    <param id="0" name="Tag">&quot;on_collided&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -909,20 +904,24 @@
                     <param id="0" name="Object">FallingTile</param>
                 </condition>
             </conditions>
+            <actions>
+                <action behavior="Timer" id="0" name="Start timer" sid="7488622192586491" type="FallingTile">
+                    <param id="0" name="Duration">0.5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;on_collided&quot;</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="5349879462340828" type="FallingTile">
+                    <param id="0" name="&apos;On&apos; time">0.05</param>
+                    <param id="1" name="&apos;Off&apos; time">0.05</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="708914922809336">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="2434065938947961" type="System" />
+            </conditions>
             <actions />
-            <sub-events>
-                <event-block sid="5317611747879081">
-                    <conditions>
-                        <condition id="-1" name="Every tick" sid="3164806261957821" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Add to" sid="9003082360676554" type="FallingTile">
-                            <param id="0" name="Instance variable">time_since_collision</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

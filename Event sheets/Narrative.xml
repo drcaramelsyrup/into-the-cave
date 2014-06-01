@@ -3,15 +3,42 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Narrative</name>
     <events>
+        <variable constant="0" name="isDead" sid="4003138463444783" static="0" type="text">False</variable>
+        <variable constant="0" name="PreviousLevel" sid="4355286827905325" static="0" type="text"></variable>
         <variable constant="0" name="CurrentScript" sid="1801811314747519" static="0" type="number">0</variable>
+        <event-block sid="5675572742625979">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7749750494382396" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;True&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="6395890429475961" type="NarrativeEndTrigger">
+                    <param id="0" name="Instance variable">LeadsTo</param>
+                    <param id="1" name="Value">PreviousLevel</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3685722675209829" type="ScriptText">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="5651762834544138" type="ScriptText">
+                    <param id="0" name="Text">&quot;One of the guys rescued you from the cave. Maybe you should take a break from all this adventuring and take up knitting or something.&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="4160448152408819">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="6398774610985147" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="7411864688069174" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Value">NarrativeEndTrigger.StartIndex</param>
+                </action>
                 <action id="2" name="Set at X" sid="2519635707107466" type="NarrativeArray">
                     <param id="0" name="X">1</param>
-                    <param id="1" name="Value">&quot;Recently, a plague has spread through the village. Many have died, and many more will die if we don&apos;t find the cure.&quot;</param>
+                    <param id="1" name="Value">&quot;Recently, a plague has spread through the village. Many have died, and many more will die if we don&apos;t find the cure. (Press down arrow to continue)&quot;</param>
                 </action>
                 <action id="2" name="Set at X" sid="3845996946952913" type="NarrativeArray">
                     <param id="0" name="X">2</param>
@@ -34,7 +61,12 @@
                 <condition id="-14" name="Compare variable" sid="3298572973947619" type="System">
                     <param id="0" name="Variable">CurrentScript</param>
                     <param id="1" name="Comparison">1</param>
-                    <param id="2" name="Value">4</param>
+                    <param id="2" name="Value">NarrativeEndTrigger.EndIndex</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="6022377254590327" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;True&quot;</param>
                 </condition>
             </conditions>
             <actions>
@@ -58,16 +90,26 @@
                         <condition id="-14" name="Compare variable" sid="9911501869687781" type="System">
                             <param id="0" name="Variable">CurrentScript</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
+                            <param id="2" name="Value">NarrativeEndTrigger.EndIndex</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="5540310271359553" type="System">
-                            <param id="0" name="Layout">Level A1</param>
+                        <action id="-25" name="Go to layout (by name)" sid="5540310271359553" type="System">
+                            <param id="0" name="Layout">NarrativeEndTrigger.LeadsTo</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="5764815466072591">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5933721503230831" type="RetryButton" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="1536684450052888" type="System">
+                    <param id="0" name="Layout">PreviousLevel</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

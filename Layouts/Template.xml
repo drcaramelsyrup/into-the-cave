@@ -293,6 +293,7 @@
                     </properties>
                     <instance-variables>
                         <PickedUp>false</PickedUp>
+                        <Color>Yellow</Color>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -300,11 +301,11 @@
                         <x>-139</x>
                         <y>-39</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>15.5</width>
+                        <height>25</height>
                         <depth>0</depth>
-                        <hotspotX>-0.0078125</hotspotX>
-                        <hotspotY>0.984375</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.569999993</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

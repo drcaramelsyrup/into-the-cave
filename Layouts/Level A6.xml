@@ -266,6 +266,7 @@
                     </properties>
                     <instance-variables>
                         <PickedUp>false</PickedUp>
+                        <Color>Yellow</Color>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -273,11 +274,11 @@
                         <x>-139</x>
                         <y>-39</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>15.5</width>
+                        <height>25</height>
                         <depth>0</depth>
-                        <hotspotX>-0.0078125</hotspotX>
-                        <hotspotY>0.984375</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.569999993</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -307,6 +308,64 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Lock" uid="450">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Color>Blue</Color>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1599</x>
+                        <y>606</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>128</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503311276</hotspotX>
+                        <hotspotY>0.92413795</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Key" uid="563">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <PickedUp>false</PickedUp>
+                        <Color>Blue</Color>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1028</x>
+                        <y>156</y>
+                        <z>0</z>
+                        <width>15.5</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.569999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -324,35 +383,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Lock2" uid="450">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1600</x>
-                        <y>608</y>
-                        <z>0</z>
-                        <width>151</width>
-                        <height>145</height>
-                        <depth>0</depth>
-                        <hotspotX>0.503311276</hotspotX>
-                        <hotspotY>0.92413795</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Porthole" uid="498">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -386,6 +416,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Color>Yellow</Color>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
@@ -1505,6 +1538,7 @@
                     </properties>
                     <instance-variables>
                         <PickedUp>false</PickedUp>
+                        <Color>Yellow</Color>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1512,11 +1546,11 @@
                         <x>1792</x>
                         <y>384</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
+                        <width>15.5</width>
+                        <height>25</height>
                         <depth>0</depth>
-                        <hotspotX>-0.0078125</hotspotX>
-                        <hotspotY>0.984375</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.569999993</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1566,31 +1600,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Key2" uid="499">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <PickedUp>false</PickedUp>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1024</x>
-                        <y>160</y>
-                        <z>0</z>
-                        <width>32</width>
-                        <height>32</height>
-                        <depth>0</depth>
-                        <hotspotX>-0.0078125</hotspotX>
-                        <hotspotY>0.984375</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
