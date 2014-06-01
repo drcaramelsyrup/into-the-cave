@@ -60,7 +60,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1120</x>
+                        <x>1056</x>
                         <y>608</y>
                         <z>0</z>
                         <width>60.96647644</width>
@@ -222,10 +222,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>128</x>
-                        <y>512</y>
+                        <y>544</y>
                         <z>0</z>
                         <width>64</width>
-                        <height>96</height>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -278,7 +278,7 @@
                         <x>544</x>
                         <y>448</y>
                         <z>0</z>
-                        <width>192</width>
+                        <width>224</width>
                         <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -305,8 +305,8 @@
                         <x>0</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>1440</width>
-                        <height>64</height>
+                        <width>1504</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -424,8 +424,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1025</x>
-                        <y>561</y>
+                        <x>928</x>
+                        <y>556</y>
                         <z>0</z>
                         <width>37.5</width>
                         <height>11</height>
@@ -452,8 +452,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1028</x>
-                        <y>575</y>
+                        <x>929</x>
+                        <y>573</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -526,7 +526,7 @@
                         <x>256</x>
                         <y>64</y>
                         <z>0</z>
-                        <width>256</width>
+                        <width>224</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -550,38 +550,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>736</x>
+                        <x>832</x>
                         <y>64</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>608</width>
                         <height>64</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SolidTile" uid="32">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>896</x>
-                        <y>64</y>
-                        <z>0</z>
-                        <width>544</width>
-                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -604,10 +577,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1280</x>
-                        <y>192</y>
+                        <x>1056</x>
+                        <y>128</y>
                         <z>0</z>
-                        <width>160</width>
+                        <width>320</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -631,11 +604,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1344</x>
-                        <y>256</y>
+                        <x>1184</x>
+                        <y>192</y>
                         <z>0</z>
-                        <width>96</width>
-                        <height>288</height>
+                        <width>320</width>
+                        <height>448</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -658,7 +631,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1280</x>
+                        <x>1120</x>
                         <y>544</y>
                         <z>0</z>
                         <width>160</width>

@@ -13,19 +13,20 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Template</layout>
         <layout>Level A4</layout>
         <layout>Level A5</layout>
-        <layout>Level A2</layout>
         <layout>Level A3</layout>
         <layout>Level B1</layout>
         <layout>Level B2</layout>
         <layout>Level B3</layout>
-        <layout active="1">Prologue</layout>
+        <layout>Prologue</layout>
         <layout>Level A1</layout>
         <layout>Level A6</layout>
         <layout>Level C1</layout>
         <layout>Level C2</layout>
         <layout>Epilogue</layout>
         <layout>Death</layout>
-        <event-sheet>Event sheet 1</event-sheet>
+        <layout>Level D1</layout>
+        <layout>Stereotype Threat</layout>
+        <event-sheet active="1">Event sheet 1</event-sheet>
         <event-sheet>Narrative</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
     </open-tabs>

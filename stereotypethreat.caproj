@@ -828,6 +828,7 @@
         <layout>Level C2.xml</layout>
         <layout>Epilogue.xml</layout>
         <layout>Death.xml</layout>
+        <layout>Level D1.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Event sheet 1.xml</event-sheet>
@@ -835,7 +836,7 @@
         <event-sheet>Narrative.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="549" />
+        <global-instance type="Keyboard" uid="576" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />
