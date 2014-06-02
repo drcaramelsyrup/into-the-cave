@@ -966,6 +966,7 @@
         <layout>Level A2.xml</layout>
         <layout>Level A3.xml</layout>
         <layout>Level A4.xml</layout>
+        <layout>Level A4.5.xml</layout>
         <layout>Level A5.xml</layout>
         <layout>Level A6.xml</layout>
         <layout>Level B1.xml</layout>
@@ -976,7 +977,6 @@
         <layout>Level C3.xml</layout>
         <layout>Stereotype Threat.xml</layout>
         <layout>Template.xml</layout>
-        <layout>Special.xml</layout>
         <layout>Epilogue.xml</layout>
         <layout>Death.xml</layout>
         <layout>Level D1.xml</layout>
