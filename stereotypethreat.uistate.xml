@@ -25,11 +25,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Epilogue</layout>
         <layout>Death</layout>
         <layout>Level D1</layout>
-        <layout>Stereotype Threat</layout>
         <layout>Level C2</layout>
-        <layout active="1">Level A2</layout>
-        <event-sheet>Event sheet 1</event-sheet>
+        <layout>Level A2</layout>
+        <layout>Level C3</layout>
+        <event-sheet active="1">Event sheet 1</event-sheet>
         <event-sheet>Narrative</event-sheet>
+        <event-sheet>Event sheet 2</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

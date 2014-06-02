@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
+        <variable constant="0" name="FallFromTopC1" sid="5025872206760196" static="0" type="text">False</variable>
         <variable constant="0" name="StereotypeThreat" sid="4088953641968951" static="0" type="text">Off</variable>
         <variable constant="0" name="Confidence" sid="261748409792726" static="0" type="number">100</variable>
         <variable comment="For playtesting - strength, gravity, speed, etc" constant="0" name="StereotypeThreatMode" sid="384432846556123" static="0" type="text"></variable>
@@ -142,20 +143,6 @@
             <actions>
                 <action id="7" name="Set mirrored" sid="884550084960513" type="Player">
                     <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>If the player falls off the bottom of the layout, restart the level.</comment>
-        <event-block sid="7649408066907736">
-            <conditions>
-                <condition id="-2" name="Compare Y" sid="257865087849986" type="Player">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">LayoutHeight</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="1948854674926905" type="System">
-                    <param id="0" name="Layout">Death</param>
                 </action>
             </actions>
         </event-block>
@@ -448,6 +435,10 @@
                     <param id="0" name="Animation">&quot;Watching&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="725589315372123" type="SingleSpikes">
+                    <param id="0" name="Animation">&quot;Watching&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3658798405365847">
@@ -467,6 +458,10 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="4" name="Set animation" sid="4550470166562106" type="RightSpikes">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="1294701714759788" type="SingleSpikes">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -603,11 +598,11 @@
             <actions>
                 <action id="0" name="Add key" sid="4252458096880545" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Father H. Father H is a great teacher, but he&apos;s way too worried. There&apos;s no need to get upset over me!&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Father H. Father H is a great teacher, but he&apos;s way too worried. There&apos;s no need to get upset over me!&quot; &amp; newline &amp; &quot;Sometimes his advice is distracting, so I just hit down arrow to get it out of my head.&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="7243528591470964" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A2 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;So, you think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down there - the fate of the village depends on us finding that relic. Just... don&apos;t get in my way.&apos;- V&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;So, YOU think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down here - the fate of the village depends on us finding that relic. Just don&apos;t get in my way.&apos;- V&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="5152925871404224" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A3 Start&quot;</param>
@@ -644,6 +639,10 @@
                 <action id="0" name="Add key" sid="311504505254256" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level C2 Start&quot;</param>
                     <param id="1" name="Value">&quot;...&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7196251861841288" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level C3 Start&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;Wait! Be careful. I&apos;ve been trying to help out a girl down there, but she fell through the cave...&apos;&quot;</param>
                 </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
@@ -923,6 +922,52 @@
                     <param id="2" name="Duration">1.0</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="4484554724340559">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="5893177259100067" type="Player">
+                    <param id="0" name="Object">LevelChangeTrigger</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="1227505772060451" type="System">
+                    <param id="0" name="Layout">LevelChangeTrigger.LeadsTo</param>
+                </action>
+                <action id="-9" name="Set value" sid="5279587440436657" type="System">
+                    <param id="0" name="Variable">FallFromTopC1</param>
+                    <param id="1" name="Value">&quot;True&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8967164965768926">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1750889817240644" type="System">
+                    <param id="0" name="Variable">FallFromTopC1</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;True&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7397875188369066">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6360901525248668" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="5653539808525795" type="Player">
+                            <param id="0" name="X">1568</param>
+                            <param id="1" name="Y">50</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3509434058423106" type="ScriptText">
+                            <param id="0" name="Text">&quot;Whoa! Phew! I guess that was the way out. ... if only that girl could&apos;ve come with me.&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2918539717693647" type="System">
+                            <param id="0" name="Variable">FallFromTopC1</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
