@@ -631,15 +631,19 @@
                 </action>
                 <action id="0" name="Add key" sid="2542405754990705" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B2 Start&quot;</param>
-                    <param id="1" name="Value">&quot;Why did they get that shortcut and I didn&apos;t?&quot;</param>
+                    <param id="1" name="Value">&quot;So I guess they have elevator access. Great. Why didn&apos;t they want me to join the Promising Explorers? And what kind of Promising Explorers need that much guidance, anyway?&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="7112955970850384" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B3 Start&quot;</param>
-                    <param id="1" name="Value">&quot;...&quot;</param>
+                    <param id="1" name="Value">&quot;I guess it&apos;s more difficult for me than for them for stupid reasons. But I can&apos;t let them think I can&apos;t do it, right? ... I shouldn&apos;t let them think so.&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="154883615233891" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level C1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;You can&apos;t count on anyone being there for you, I guess.&quot;</param>
+                    <param id="1" name="Value">&quot;I really just wish I had some support.&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="311504505254256" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level C2 Start&quot;</param>
+                    <param id="1" name="Value">&quot;...&quot;</param>
                 </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
@@ -669,6 +673,9 @@
                 <action id="4" name="Set animation" sid="199917762102696" type="Lock">
                     <param id="0" name="Animation">Lock.Color</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action behavior="Physics" id="27" name="Set enabled" sid="5015584946933841" type="FallingTile">
+                    <param id="0" name="Mode">0</param>
                 </action>
             </actions>
         </event-block>
@@ -888,13 +895,13 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="CustomMovement" id="3" name="Accelerate" sid="8622431766656084" type="FallingTile">
-                    <param id="0" name="Which">2</param>
-                    <param id="1" name="Acceleration">2000</param>
+                <action behavior="Physics" id="27" name="Set enabled" sid="9912227465401925" type="FallingTile">
+                    <param id="0" name="Mode">1</param>
                 </action>
-                <action behavior="CustomMovement" id="2" name="Set speed" sid="8832498741402782" type="FallingTile">
-                    <param id="0" name="Which">2</param>
-                    <param id="1" name="Speed">300</param>
+                <action behavior="Physics" id="0" name="Apply force" sid="3787000847973073" type="FallingTile">
+                    <param id="0" name="Force X">0</param>
+                    <param id="1" name="Force Y">50</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
             </actions>
         </event-block>
@@ -916,12 +923,6 @@
                     <param id="2" name="Duration">1.0</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="708914922809336">
-            <conditions>
-                <condition id="-3" name="On end of layout" sid="2434065938947961" type="System" />
-            </conditions>
-            <actions />
         </event-block>
     </events>
 </c2eventsheet>

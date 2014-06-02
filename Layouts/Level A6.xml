@@ -27,34 +27,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ScriptTrigger" uid="458">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ScriptKey></ScriptKey>
-                        <Activated>false</Activated>
-                        <Text>&quot;Are you okay? You look a bit worn out. Hey, don&apos;t worry. It&apos;s tough being an explorer, but so worth it in the end.&quot;</Text>
-                        <Image></Image>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>512</x>
-                        <y>551</y>
-                        <z>0</z>
-                        <width>110.851249695</width>
-                        <height>110.851249695</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="BackgroundTile" uid="433">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -226,33 +198,11 @@
                         <x>-148</x>
                         <y>353</y>
                         <z>0</z>
-                        <width>60.96647644</width>
-                        <height>69.972885132</height>
+                        <width>74.129692078</width>
+                        <height>63.044876099</height>
                         <depth>0</depth>
-                        <hotspotX>0.488636374</hotspotX>
-                        <hotspotY>0.985148489</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Healer" uid="447">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>512</x>
-                        <y>544</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>85</height>
-                        <depth>0</depth>
-                        <hotspotX>0.419999987</hotspotX>
-                        <hotspotY>0.247058824</hotspotY>
+                        <hotspotX>0.4906542</hotspotX>
+                        <hotspotY>0.983516455</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -299,7 +249,7 @@
                         <x>1600</x>
                         <y>576</y>
                         <z>0</z>
-                        <width>63.905208588</width>
+                        <width>63.905212402</width>
                         <height>73.345748901</height>
                         <depth>0</depth>
                         <hotspotX>0.477272719</hotspotX>
@@ -362,6 +312,56 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.569999993</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ThoughtBubbleTail" uid="584">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>506</x>
+                        <y>570</y>
+                        <z>0</z>
+                        <width>37.5</width>
+                        <height>11</height>
+                        <depth>0</depth>
+                        <hotspotX>-0.029999999</hotspotX>
+                        <hotspotY>0.550000012</hotspotY>
+                        <angle>1.508415461</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ScriptTrigger" uid="458">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <ScriptKey></ScriptKey>
+                        <Activated>false</Activated>
+                        <Text>&quot;Are you okay? You look a bit worn out. Hey, don&apos;t worry. It&apos;s tough being an explorer, but so worth it in the end. Here, let me help you with that shield of yours.&quot;</Text>
+                        <Image></Image>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>511</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>128</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -479,7 +479,7 @@
                         <x>-148</x>
                         <y>428</y>
                         <z>0</z>
-                        <width>63.905208588</width>
+                        <width>63.905212402</width>
                         <height>73.345748901</height>
                         <depth>0</depth>
                         <hotspotX>0.477272719</hotspotX>
@@ -1600,6 +1600,28 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Healer" uid="447">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>511.873962402</x>
+                        <y>572.296447754</y>
+                        <z>0</z>
+                        <width>82.481987</width>
+                        <height>50.314014435</height>
+                        <depth>0</depth>
+                        <hotspotX>0.495000005</hotspotX>
+                        <hotspotY>0.262295067</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
