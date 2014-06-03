@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="NarrativeEndTrigger" uid="36">
+                <instance type="NarrativeEndTrigger" uid="565">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -54,7 +54,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Blackness" uid="37">
+                <instance type="Blackness" uid="566">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -74,7 +74,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="QuitButton" uid="557">
+                <instance type="QuitButton" uid="569">
                     <properties>
                         <type>Button</type>
                         <text>Yeah, maybe you aren&apos;t cut out for this. Find a friendlier game, maybe?</text>
@@ -98,7 +98,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="RetryButton" uid="499">
+                <instance type="RetryButton" uid="570">
                     <properties>
                         <type>Button</type>
                         <text>Try again, even though you might fail again.</text>
@@ -139,7 +139,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TextBackdrop" uid="64">
+                <instance type="TextBackdrop" uid="571">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -161,7 +161,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ScriptText" uid="65">
+                <instance type="ScriptText" uid="572">
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>

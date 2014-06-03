@@ -72,13 +72,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CenterSpikes" uid="1155">
+                <instance type="Spikes" uid="1155">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Direction></Direction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -116,13 +119,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CenterSpikes" uid="1157">
+                <instance type="Spikes" uid="1157">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Direction></Direction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BackgroundTile" uid="191">
+                <instance type="BackgroundTile" uid="198">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -47,7 +47,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidTile" uid="192">
+                <instance type="SolidTile" uid="214">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -74,7 +74,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RightSpikes" uid="193">
+                <instance type="RightSpikes" uid="215">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -96,7 +96,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LeftSpikes" uid="196">
+                <instance type="LeftSpikes" uid="216">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -118,7 +118,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="STTrigger" uid="197">
+                <instance type="STTrigger" uid="217">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -143,7 +143,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RightSpikes" uid="198">
+                <instance type="RightSpikes" uid="218">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -165,7 +165,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LeftSpikes" uid="214">
+                <instance type="LeftSpikes" uid="219">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -187,7 +187,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ConfidenceBubble" uid="215">
+                <instance type="ConfidenceBubble" uid="220">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -209,7 +209,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SuperDoor" uid="216">
+                <instance type="SuperDoor" uid="221">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -234,7 +234,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ScriptTrigger" uid="217">
+                <instance type="ScriptTrigger" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -349,13 +349,16 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CenterSpikes" uid="218">
+                <instance type="Spikes" uid="223">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Direction></Direction>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -371,7 +374,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SubDoor" uid="219">
+                <instance type="SubDoor" uid="224">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -396,7 +399,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="220">
+                <instance type="Player" uid="499">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -437,7 +440,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TrapCollider" uid="221">
+                <instance type="TrapCollider" uid="549">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -479,7 +482,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="STOverlay" uid="222">
+                <instance type="STOverlay" uid="551">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -516,7 +519,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TextBackdrop" uid="223">
+                <instance type="TextBackdrop" uid="552">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -538,7 +541,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ScriptText" uid="224">
+                <instance type="ScriptText" uid="553">
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>

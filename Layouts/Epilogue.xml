@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="VillageBG" uid="551">
+                <instance type="VillageBG" uid="554">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -91,7 +91,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TextBackdrop" uid="552">
+                <instance type="TextBackdrop" uid="557">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -113,7 +113,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ScriptText" uid="553">
+                <instance type="ScriptText" uid="564">
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>

@@ -151,7 +151,7 @@
         <event-block sid="2770252835999996">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="5629216206535351" type="Player">
-                    <param id="0" name="Object">CenterSpikes</param>
+                    <param id="0" name="Object">Spikes</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="102802625227375" type="System">
                     <param id="0" name="Variable">TimeOfLastDamage</param>
@@ -175,100 +175,10 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="6605733224740455">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="268835511540482" type="Player">
-                    <param id="0" name="Object">LeftSpikes</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="7455531536382156" type="System">
-                    <param id="0" name="Variable">TimeOfLastDamage</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">time-1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="3465191094402477" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">10</param>
-                </action>
-                <action id="-9" name="Set value" sid="3709213671708081" type="System">
-                    <param id="0" name="Variable">TimeOfLastDamage</param>
-                    <param id="1" name="Value">time</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="6962443428420677" type="Player">
-                    <param id="0" name="Magnitude">20</param>
-                    <param id="1" name="Duration">0.4</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5586328379240207">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="776750820233655" type="Player">
-                    <param id="0" name="Object">RightSpikes</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="9764383943310933" type="System">
-                    <param id="0" name="Variable">TimeOfLastDamage</param>
-                    <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Value">time-1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="2742626210031137" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">10</param>
-                </action>
-                <action id="-9" name="Set value" sid="4342413207781938" type="System">
-                    <param id="0" name="Variable">TimeOfLastDamage</param>
-                    <param id="1" name="Value">time</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="6945380479448039" type="Player">
-                    <param id="0" name="Magnitude">20</param>
-                    <param id="1" name="Duration">0.4</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2961328511090889">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="2334563366550877" type="Player">
-                    <param id="0" name="Object">LeftSpikes</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="1104791769744439" type="System">
-                    <param id="0" name="Variable">TimeOfLastDamage</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">time-1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="9792368151883406" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2209806221353199">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="3514744934161543" type="Player">
-                    <param id="0" name="Object">RightSpikes</param>
-                </condition>
-                <condition id="-14" name="Compare variable" sid="5682081886762695" type="System">
-                    <param id="0" name="Variable">TimeOfLastDamage</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">time-1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-11" name="Subtract from" sid="63748275303822" type="System">
-                    <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.5</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="3998955102154366">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="2864361169724479" type="Player">
-                    <param id="0" name="Object">CenterSpikes</param>
+                    <param id="0" name="Object">Spikes</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="60608327520151" type="System">
                     <param id="0" name="Variable">TimeOfLastDamage</param>
@@ -298,7 +208,7 @@
             <actions>
                 <action id="-10" name="Add to" sid="494310611197653" type="System">
                     <param id="0" name="Variable">Confidence</param>
-                    <param id="1" name="Value">0.1</param>
+                    <param id="1" name="Value">0.5</param>
                 </action>
                 <action id="-9" name="Set value" sid="2081431250710271" type="System">
                     <param id="0" name="Variable">StereotypeThreat</param>
@@ -423,19 +333,15 @@
                 <action id="-16" name="Set opacity" sid="5617973981376829" type="STOverlay">
                     <param id="0" name="Opacity">STOverlay.Opacity+12</param>
                 </action>
-                <action id="4" name="Set animation" sid="9710350827151247" type="CenterSpikes">
+                <action id="4" name="Set animation" sid="9710350827151247" type="Spikes">
+                    <param id="0" name="Animation">&quot;Watching&quot;&amp;Spikes.Direction</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="8517398763013176" type="LeftSpikes">
                     <param id="0" name="Animation">&quot;Watching&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="676612172305865" type="LeftSpikes">
-                    <param id="0" name="Animation">&quot;Watching&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="5694061668589113" type="RightSpikes">
-                    <param id="0" name="Animation">&quot;Watching&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="725589315372123" type="SingleSpikes">
+                <action id="4" name="Set animation" sid="8891582782599086" type="RightSpikes">
                     <param id="0" name="Animation">&quot;Watching&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
@@ -449,19 +355,15 @@
                 <action id="-16" name="Set opacity" sid="6467939718682401" type="STOverlay">
                     <param id="0" name="Opacity">STOverlay.Opacity-10</param>
                 </action>
-                <action id="4" name="Set animation" sid="8104634642043953" type="CenterSpikes">
+                <action id="4" name="Set animation" sid="8104634642043953" type="Spikes">
+                    <param id="0" name="Animation">&quot;Default&quot;&amp;Spikes.Direction</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="2516934109230639" type="LeftSpikes">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="4" name="Set animation" sid="8654348164532176" type="LeftSpikes">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="4550470166562106" type="RightSpikes">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="1294701714759788" type="SingleSpikes">
+                <action id="4" name="Set animation" sid="3218765275081052" type="RightSpikes">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>

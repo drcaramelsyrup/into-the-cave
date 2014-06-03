@@ -54,7 +54,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="BackgroundTile" sid="1702273566474247">
             <plugin id="TiledBg" />
             <texture />
@@ -188,8 +188,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CenterSpikes" sid="6478525385377356">
+        <object-type name="Spikes" sid="6478525385377356">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment='&quot;&quot; if centered, &quot;Left&quot; if left, &quot;Right&quot; if right' name="Direction" sid="2959315951310045" type="string" />
+            </instance-variables>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9661416122946652" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="1.02857">
@@ -214,6 +217,62 @@
                             <point x="1" y="1" />
                             <point x="0" y="1" />
                             <point x="0.0408163" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="DefaultLeft" pingpong="0" repeatcount="1" repeatto="0" sid="9367370193953497" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.339286" y="0.267606" />
+                            <point x="0.5" y="0.253521" />
+                            <point x="0.553571" y="0.352113" />
+                            <point x="0.910714" y="0.492958" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.178571" y="0.859155" />
+                            <point x="0.0178571" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="DefaultRight" pingpong="0" repeatcount="1" repeatto="0" sid="394594163640718" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.47619" y="0.30303" />
+                            <point x="0.5" y="0.212121" />
+                            <point x="0.714286" y="0.181818" />
+                            <point x="1" y="0.5" />
+                            <point x="0.904762" y="0.939394" />
+                            <point x="0.5" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.142857" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="WatchingLeft" pingpong="0" repeatcount="1" repeatto="0" sid="8372728128402134" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.333333" y="0.267606" />
+                            <point x="0.491228" y="0.225352" />
+                            <point x="0.561404" y="0.352113" />
+                            <point x="0.912281" y="0.492958" />
+                            <point x="1" y="1" />
+                            <point x="0.491228" y="1" />
+                            <point x="0.175439" y="0.859155" />
+                            <point x="0.0350877" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="WatchingRight" pingpong="0" repeatcount="1" repeatto="0" sid="6813870568791522" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.465116" y="0.30303" />
+                            <point x="0.488372" y="0.227273" />
+                            <point x="0.72093" y="0.181818" />
+                            <point x="1" y="0.5" />
+                            <point x="0.906977" y="0.939394" />
+                            <point x="0.488372" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.139535" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1068,7 +1127,7 @@
         <event-sheet>Narrative.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="576" />
+        <global-instance type="Keyboard" uid="986" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

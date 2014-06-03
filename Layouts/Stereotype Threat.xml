@@ -27,7 +27,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BackgroundTile" uid="48">
+                <instance type="BackgroundTile" uid="77">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -47,7 +47,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ConfidenceBubble" uid="55">
+                <instance type="ConfidenceBubble" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -69,7 +69,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidTile" uid="38">
+                <instance type="SolidTile" uid="80">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -96,7 +96,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidTile" uid="39">
+                <instance type="SolidTile" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -123,7 +123,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidTile" uid="40">
+                <instance type="SolidTile" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -150,7 +150,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidTile" uid="63">
+                <instance type="SolidTile" uid="83">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -177,7 +177,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidTile" uid="78">
+                <instance type="SolidTile" uid="84">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -221,7 +221,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="STTrigger" uid="66">
+                <instance type="STTrigger" uid="85">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,7 +246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SubDoor" uid="73">
+                <instance type="SubDoor" uid="126">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -271,7 +271,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player" uid="126">
+                <instance type="Player" uid="130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -329,7 +329,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="STModeList" uid="80">
+                <instance type="STModeList" uid="131">
                     <properties>
                         <items>Str; Grv; Spd; FSpd</items>
                         <tooltip>For playtest changes</tooltip>
@@ -353,7 +353,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="STEditBox" uid="81">
+                <instance type="STEditBox" uid="191">
                     <properties>
                         <text></text>
                         <placeholder></placeholder>
@@ -379,7 +379,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="STToggle" uid="82">
+                <instance type="STToggle" uid="192">
                     <properties>
                         <items>On;Off</items>
                         <tooltip>For playtest changes</tooltip>
@@ -403,7 +403,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="STModeList2" uid="83">
+                <instance type="STModeList2" uid="193">
                     <properties>
                         <items>Original str 650 -&gt; ST 520;Original grav 1500;Original spd 330;Original fspd 1000</items>
                         <tooltip>For playtest changes</tooltip>
@@ -427,7 +427,7 @@
                         <hotspotY>0</hotspotY>
                     </world>
                 </instance>
-                <instance type="STSetButton" uid="84">
+                <instance type="STSetButton" uid="196">
                     <properties>
                         <type>Button</type>
                         <text>Set</text>
@@ -468,7 +468,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="STOverlay" uid="85">
+                <instance type="STOverlay" uid="197">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
