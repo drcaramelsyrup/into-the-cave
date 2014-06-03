@@ -216,6 +216,21 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="9503422753581809">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6048865153268195" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">120</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8045622473735033" type="System">
+                    <param id="0" name="Variable">Confidence</param>
+                    <param id="1" name="Value">120</param>
+                </action>
+            </actions>
+        </event-block>
         <comment>If run out of confidence, restart the level (for now)</comment>
         <event-block sid="2602431857037689">
             <conditions>
@@ -345,6 +360,18 @@
                     <param id="0" name="Animation">&quot;Watching&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="6916677335232121" type="SubDoor">
+                    <param id="0" name="Animation">&quot;Watching&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="914190582399807" type="Lock">
+                    <param id="0" name="Animation">&quot;Watching&quot;&amp;Lock.Color</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="5042668112479313" type="Key">
+                    <param id="0" name="Animation">&quot;Watching&quot;&amp;Key.Color</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3658798405365847">
@@ -365,6 +392,18 @@
                 </action>
                 <action id="4" name="Set animation" sid="3218765275081052" type="RightSpikes">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="6050187689242318" type="SubDoor">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="910197003233453" type="Lock">
+                    <param id="0" name="Animation">Lock.Color</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="7974388828104832" type="Key">
+                    <param id="0" name="Animation">Key.Color</param>
                     <param id="1" name="From">1</param>
                 </action>
             </actions>
@@ -500,11 +539,11 @@
             <actions>
                 <action id="0" name="Add key" sid="4252458096880545" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Father H. Father H is a great teacher, but he&apos;s way too worried. There&apos;s no need to get upset over me!&quot; &amp; newline &amp; &quot;Sometimes his advice is distracting, so I just hit down arrow to get it out of my head.&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;The first thing to remember when you get down there is to use the arrow keys to move.&apos; - Father H. He&apos;s a great teacher, but often way too worried. There&apos;s no need to get upset over me! Sometimes his advice is distracting, so I just hit down arrow to get it out of my head.&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="7243528591470964" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A2 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;So, YOU think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down here - the fate of the village depends on us finding that relic. Just don&apos;t get in my way.&apos;- V&quot;</param>
+                    <param id="1" name="Value">&quot;&apos;So, YOU think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down here - the fate of the village depends on us finding that cure. Just don&apos;t get in my way.&apos;- V&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="5152925871404224" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A3 Start&quot;</param>
@@ -548,6 +587,10 @@
                 </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
+                <action id="-24" name="Move to top" sid="7177506042911048" type="FallingTile" />
+                <action id="-24" name="Move to top" sid="2200091374215355" type="MovingSolidTile" />
+                <action id="-24" name="Move to top" sid="517170379667007" type="Lock" />
+                <action id="-24" name="Move to top" sid="6693740430561218" type="Key" />
                 <action id="0" name="Set text" sid="6063147676240336" type="ScriptText">
                     <param id="0" name="Text">TextScriptMap.Get(LayoutName &amp; &quot; Start&quot;)</param>
                 </action>
@@ -566,14 +609,6 @@
                 <action id="-3" name="Set position" sid="8137884636486693" type="ScriptText">
                     <param id="0" name="X">32</param>
                     <param id="1" name="Y">352</param>
-                </action>
-                <action id="4" name="Set animation" sid="7974388828104832" type="Key">
-                    <param id="0" name="Animation">Key.Color</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="4" name="Set animation" sid="199917762102696" type="Lock">
-                    <param id="0" name="Animation">Lock.Color</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action behavior="Physics" id="27" name="Set enabled" sid="5015584946933841" type="FallingTile">
                     <param id="0" name="Mode">0</param>
@@ -702,64 +737,6 @@
                     <param id="1" name="Value">&quot;False&quot;</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="9289506262949716">
-            <conditions>
-                <condition behavior="Platform" id="2" name="Is on floor" sid="2700396710061045" type="Player" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="2930738002651972">
-                    <conditions>
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="8066014438381973" type="Player">
-                            <param id="0" name="Side">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7791574299827844" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2791532872994757">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="9825725541862126" type="System" />
-                        <condition behavior="Platform" id="10" name="Is by wall" sid="4006999657695417" type="Player">
-                            <param id="0" name="Side">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="8610371628741374" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1812966418449519">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="1137569819951831" type="System" />
-                        <condition behavior="Platform" id="0" name="Is moving" sid="6726487788407388" type="Player" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6694733599330583" type="Player">
-                            <param id="0" name="Animation">&quot;Walking&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7829467621800129">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="3201412559430432" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3546449532650994" type="Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="7760684147828902">
             <conditions>

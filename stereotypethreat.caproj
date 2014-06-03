@@ -11,6 +11,7 @@
     <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -455,6 +456,19 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="Watching" pingpong="0" repeatcount="1" repeatto="0" sid="482148288186539" speed="5">
+                    <frame duration="1" hotspotX="0.477273" hotspotY="0.564356">
+                        <collision-poly>
+                            <point x="0.204082" y="0.20202" />
+                            <point x="0.5" y="0" />
+                            <point x="0.846939" y="0.151515" />
+                            <point x="0.969388" y="0.494949" />
+                            <point x="0.989796" y="0.989899" />
+                            <point x="0.0102041" y="0.989899" />
+                            <point x="0.0510204" y="0.494949" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="SuperDoor" sid="446597144786059">
@@ -516,6 +530,32 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="WatchingYellow" pingpong="0" repeatcount="1" repeatto="0" sid="8620652056773976" speed="5">
+                    <frame duration="1" hotspotX="0.503311" hotspotY="0.924138">
+                        <collision-poly>
+                            <point x="0.0444444" y="0.0535714" />
+                            <point x="0.496296" y="0" />
+                            <point x="0.992593" y="0.00892857" />
+                            <point x="0.992593" y="0.991071" />
+                            <point x="0.496296" y="0.142857" />
+                            <point x="0.0444444" y="0.946429" />
+                            <point x="0.00740741" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="WatchingBlue" pingpong="0" repeatcount="1" repeatto="0" sid="4938195304887158" speed="5">
+                    <frame duration="1" hotspotX="0.490066" hotspotY="0.903448">
+                        <collision-poly>
+                            <point x="0.0444444" y="0.0535714" />
+                            <point x="0.496296" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.992593" y="0.991071" />
+                            <point x="0.496296" y="0.142857" />
+                            <point x="0.0444444" y="0.946429" />
+                            <point x="0.00740741" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Key" sid="650892989989993">
@@ -550,6 +590,32 @@
                             <point x="0.483871" y="1" />
                             <point x="0.387097" y="0.76" />
                             <point x="0.387097" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="WatchingYellow" pingpong="0" repeatcount="1" repeatto="0" sid="600855292133551" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.57">
+                        <collision-poly>
+                            <point x="0.162162" y="0.1" />
+                            <point x="0.486486" y="0.166667" />
+                            <point x="0.837838" y="0.1" />
+                            <point x="0.702703" y="0.5" />
+                            <point x="0.837838" y="0.9" />
+                            <point x="0.486486" y="1" />
+                            <point x="0.243243" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="WatchingBlue" pingpong="0" repeatcount="1" repeatto="0" sid="2664512322119941" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.57">
+                        <collision-poly>
+                            <point x="0.162162" y="0.1" />
+                            <point x="0.486486" y="0.166667" />
+                            <point x="0.837838" y="0.1" />
+                            <point x="0.702703" y="0.5" />
+                            <point x="0.837838" y="0.9" />
+                            <point x="0.486486" y="1" />
+                            <point x="0.243243" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -948,7 +1014,7 @@
                 <instance-variable name="Text" sid="6623298115211875" type="string" />
             </instance-variables>
         </object-type>
-        <object-type name="RetryButton" sid="3535871611460592">
+        <object-type name="ChangeScenesButton" sid="3535871611460592">
             <plugin id="Button" />
         </object-type>
         <object-type name="MaleExplorer2" sid="6067413492202753">
@@ -1097,9 +1163,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="137648689801597">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Text2" sid="4710624062063878">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="PlayButton" sid="7869718120574836">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Text3" sid="2777037693908747">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text4" sid="2066487897832399">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
-    <layout-folder expanded="1">
+    <layout-folder expanded="0">
+        <layout>Title Screen.xml</layout>
         <layout>Prologue.xml</layout>
         <layout>Level A1.xml</layout>
         <layout>Level A2.xml</layout>
@@ -1128,9 +1210,27 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="986" />
+        <global-instance type="Audio" uid="786">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <music-folder expanded="1">
+        <file name="MUSIC.m4a" />
+        <file name="MUSIC.ogg" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />

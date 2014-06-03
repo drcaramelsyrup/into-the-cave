@@ -348,7 +348,7 @@
                     <instance-variables>
                         <ScriptKey></ScriptKey>
                         <Activated>false</Activated>
-                        <Text>&quot;Are you okay? You look a bit worn out. Hey, don&apos;t worry. It&apos;s tough being an explorer, but so worth it in the end. Here, let me help you with that shield of yours.&quot;</Text>
+                        <Text>&quot;Are you okay? You look a bit worn out. Hey, don&apos;t worry. It&apos;s tough being an explorer, but so worth it in the end. Here, let me refill your shield.&quot;</Text>
                         <Image></Image>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -1778,7 +1778,7 @@
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Trebuchet MS,-19,400,0</font>
+                        <font>Trebuchet MS,-17,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>

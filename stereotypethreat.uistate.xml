@@ -29,7 +29,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Level A2</layout>
         <layout>Level C3</layout>
         <layout>Level A3 -- Other Option</layout>
-        <event-sheet active="1">Event sheet 1</event-sheet>
+        <layout active="1">Title Screen</layout>
+        <event-sheet>Event sheet 1</event-sheet>
         <event-sheet>Narrative</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
     </open-tabs>

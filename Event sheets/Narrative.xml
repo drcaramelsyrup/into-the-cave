@@ -4,7 +4,7 @@
     <name>Narrative</name>
     <events>
         <variable constant="0" name="isDead" sid="4003138463444783" static="0" type="text">False</variable>
-        <variable constant="0" name="PreviousLevel" sid="4355286827905325" static="0" type="text"></variable>
+        <variable constant="0" name="PreviousLevel" sid="4355286827905325" static="0" type="text">Prologue</variable>
         <variable constant="0" name="CurrentScript" sid="1801811314747519" static="0" type="number">0</variable>
         <event-block sid="5675572742625979">
             <conditions>
@@ -30,6 +30,11 @@
         <event-block sid="4160448152408819">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="6398774610985147" type="System" />
+                <condition id="-14" name="Compare variable" sid="409038128459543" type="System">
+                    <param id="0" name="Variable">isDead</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">&quot;True&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Set value" sid="7411864688069174" type="System">
@@ -37,19 +42,29 @@
                     <param id="1" name="Value">NarrativeEndTrigger.StartIndex</param>
                 </action>
                 <action id="2" name="Set at X" sid="2519635707107466" type="NarrativeArray">
-                    <param id="0" name="X">1</param>
-                    <param id="1" name="Value">&quot;Recently, a plague has spread through the village. Many have died, and many more will die if we don&apos;t find the cure. (Press down arrow to continue)&quot;</param>
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">&quot;A plague is spreading through the village. Many have died, and many more will die if we don&apos;t find the cure.&quot;&amp;newline&amp;&quot;(Press the down arrow key to continue)&quot;</param>
                 </action>
                 <action id="2" name="Set at X" sid="3845996946952913" type="NarrativeArray">
-                    <param id="0" name="X">2</param>
+                    <param id="0" name="X">1</param>
                     <param id="1" name="Value">&quot;According to the elders, every time our village has been in peril, the cave has always saved us. They think that the cure to the plague lies in the cave.&quot;</param>
                 </action>
                 <action id="2" name="Set at X" sid="7371458392058916" type="NarrativeArray">
-                    <param id="0" name="X">3</param>
+                    <param id="0" name="X">2</param>
                     <param id="1" name="Value">&quot;As a result, lots of young explorers like me have entered the cave. I&apos;m not part of the Promising Young Explorers&apos; Program, but I think I still have a shot!&quot;</param>
                 </action>
-                <action id="-15" name="Set visible" sid="6719562759887295" type="TextBackdrop">
-                    <param id="0" name="Visibility">0</param>
+                <action id="2" name="Set at X" sid="1928428700503697" type="NarrativeArray">
+                    <param id="0" name="X">3</param>
+                    <param id="1" name="Value">&quot;You did it...&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="1642606338525342" type="ScriptText">
+                    <param id="0" name="Text">NarrativeArray.At(CurrentScript)</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9663666901450695" type="TextBackdrop">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5677628824677366" type="ScriptText">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
@@ -63,7 +78,7 @@
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Value">NarrativeEndTrigger.EndIndex</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="6022377254590327" type="System">
+                <condition id="-14" name="Compare variable" sid="7771941353192265" type="System">
                     <param id="0" name="Variable">isDead</param>
                     <param id="1" name="Comparison">1</param>
                     <param id="2" name="Value">&quot;True&quot;</param>
@@ -73,12 +88,6 @@
                 <action id="-10" name="Add to" sid="1592022058335468" type="System">
                     <param id="0" name="Variable">CurrentScript</param>
                     <param id="1" name="Value">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="685958164813019" type="TextBackdrop">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="1705017485867547" type="ScriptText">
-                    <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="0" name="Set text" sid="3969494000789714" type="ScriptText">
                     <param id="0" name="Text">NarrativeArray.At(CurrentScript)</param>
@@ -103,11 +112,34 @@
         </event-block>
         <event-block sid="5764815466072591">
             <conditions>
-                <condition id="0" name="On clicked" sid="5933721503230831" type="RetryButton" />
+                <condition id="0" name="On clicked" sid="5933721503230831" type="ChangeScenesButton" />
             </conditions>
             <actions>
                 <action id="-25" name="Go to layout (by name)" sid="1536684450052888" type="System">
                     <param id="0" name="Layout">PreviousLevel</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2629462103621438">
+            <conditions>
+                <condition id="0" name="On clicked" sid="4235315239530936" type="QuitButton" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4746227464135009" type="System">
+                    <param id="0" name="Layout">Title Screen</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="858907961515449">
+            <conditions>
+                <condition id="4" inverted="1" name="Is any playing" sid="3153484442860129" type="Audio" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="2537529157258068" type="Audio">
+                    <param id="0" name="Audio file">MUSIC</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

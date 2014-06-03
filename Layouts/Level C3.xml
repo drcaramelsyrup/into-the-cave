@@ -6253,7 +6253,7 @@
                     <properties>
                         <text></text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Trebuchet MS,-19,400,0</font>
+                        <font>Trebuchet MS,-17,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
