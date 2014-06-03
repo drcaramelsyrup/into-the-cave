@@ -30,11 +30,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Level C3</layout>
         <layout>Level A3 -- Other Option</layout>
         <layout>Title Screen</layout>
-        <layout>Level D2</layout>
+        <layout active="1">Level D2</layout>
         <layout>Level D3</layout>
         <layout>Level D4</layout>
         <event-sheet>Event sheet 1</event-sheet>
-        <event-sheet active="1">Narrative</event-sheet>
+        <event-sheet>Narrative</event-sheet>
         <event-sheet>Event sheet 2</event-sheet>
     </open-tabs>
     <properties>

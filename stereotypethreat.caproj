@@ -758,6 +758,10 @@
                     <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>MaleExplorer</type>
+                <type>HugeConfidenceBubble</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6717627699713267" speed="5">
                     <frame duration="1" hotspotX="0.511111" hotspotY="0.504951">
@@ -910,6 +914,10 @@
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
+            <container>
+                <type>MaleExplorer</type>
+                <type>HugeConfidenceBubble</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7394363431232717" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">

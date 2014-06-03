@@ -22,9 +22,6 @@
                 <action id="-15" name="Set visible" sid="2357044424525257" type="ThoughtBubbleTail">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="8045091596922718" type="HugeConfidenceBubble">
-                    <param id="0" name="Visibility">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="4092074008391524">
@@ -49,6 +46,9 @@
                         <action id="-9" name="Destroy" sid="2865277040700773" type="MaleExplorer" />
                         <action id="0" name="Set text" sid="1319230248928488" type="ScriptText">
                             <param id="0" name="Text">&quot;&quot;&quot;Patience is the mother of success.&quot;&quot; - Father H.&quot; &amp; newline &amp; &quot;Yeah, yeah. Unless you&apos;re a member of the darn Promising Explorers Program...&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8045091596922718" type="HugeConfidenceBubble">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
