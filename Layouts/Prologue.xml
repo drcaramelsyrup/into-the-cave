@@ -74,6 +74,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PlayerPortrait" uid="1008">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>298.841522217</x>
+                        <y>291.24041748</y>
+                        <z>0</z>
+                        <width>179.811721802</width>
+                        <height>478.367034912</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501048207</hotspotX>
+                        <hotspotY>0.500393987</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -147,7 +169,7 @@
     <nonworld-instances>
         <instance type="NarrativeArray" uid="164">
             <properties>
-                <width>10</width>
+                <width>16</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>

@@ -48,7 +48,7 @@
                         </action>
                         <action id="-9" name="Destroy" sid="2865277040700773" type="MaleExplorer" />
                         <action id="0" name="Set text" sid="1319230248928488" type="ScriptText">
-                            <param id="0" name="Text">&quot;&apos;Patience is the mother of success.&apos; - Father H.&quot; &amp; newline &amp; &quot;Yeah, yeah. Unless you&apos;re a member of the darn Promising Explorers Program...&quot;</param>
+                            <param id="0" name="Text">&quot;&quot;&quot;Patience is the mother of success.&quot;&quot; - Father H.&quot; &amp; newline &amp; &quot;Yeah, yeah. Unless you&apos;re a member of the darn Promising Explorers Program...&quot;</param>
                         </action>
                     </actions>
                 </event-block>

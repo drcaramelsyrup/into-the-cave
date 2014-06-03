@@ -55,7 +55,55 @@
                 </action>
                 <action id="2" name="Set at X" sid="1928428700503697" type="NarrativeArray">
                     <param id="0" name="X">3</param>
-                    <param id="1" name="Value">&quot;You did it...&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;You... you found the cure?&quot;&quot;&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="4824436850796483" type="NarrativeArray">
+                    <param id="0" name="X">4</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;Are you sure one of the fine young men from V&apos;s group didn&apos;t help you?&quot;&quot;&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="8315375821111903" type="NarrativeArray">
+                    <param id="0" name="X">5</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;... yes, Father, I had the help of some of the cave guides, but certainly not any of the other explorers. I can handle myself. And it looks like the villagers treated with the thorn poultice are recovering. So.&quot;&quot;&quot; &amp; newline &amp; &quot;And then I looked at Father H expectantly. Maybe too expectantly. Perhaps it was not proper, but then again, I regret nothing I did that day.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="3124819922140743" type="NarrativeArray">
+                    <param id="0" name="X">6</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;... in that case, I suppose we must thank you for your most timely contribution to the village. ... thank you, M.&quot;&quot;&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="8879046259163458" type="NarrativeArray">
+                    <param id="0" name="X">7</param>
+                    <param id="1" name="Value">&quot;And that was all I got. That was all I got ten years ago.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="2328805531828612" type="NarrativeArray">
+                    <param id="0" name="X">8</param>
+                    <param id="1" name="Value">&quot;But now, with the toxic bramble cleared out of the cave, a thorough investigation of the strange inscriptions completed and future pathways built taking them into account...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="9060753439979574" type="NarrativeArray">
+                    <param id="0" name="X">9</param>
+                    <param id="1" name="Value">&quot;Eventually, the Fathers let up. The Promising Explorers&apos; Program was modified to include others, too. More girls have joined the program since then.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="4225159859732157" type="NarrativeArray">
+                    <param id="0" name="X">10</param>
+                    <param id="1" name="Value">&quot;But really, it should&apos;ve been common sense from the first place, no? I&apos;m just glad it was all sorted out in the end.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="3243682648600314" type="NarrativeArray">
+                    <param id="0" name="X">11</param>
+                    <param id="1" name="Value">&quot;Even if I didn&apos;t receive much fanfare from the Fathers at the time, I like to think that my real reward is watching others follow in my footsteps.&quot; &amp;newline&amp; &quot;That&apos;s why I&apos;m becoming a cave guide this year. To provide others the support I didn&apos;t have.&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="7416573939790566" type="NarrativeArray">
+                    <param id="0" name="X">12</param>
+                    <param id="1" name="Value">&quot;But I&apos;ve said enough about myself now. Storytime&apos;s over! Back to work. Say, isn&apos;t it time for you to lead another exploration?&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="9996510521035968" type="NarrativeArray">
+                    <param id="0" name="X">13</param>
+                    <param id="1" name="Value">&quot;Designer Credits:&quot; &amp;newline&amp; &quot;Programming: Matt Mistele, Edward Wang, Justin Krasner-Karpen&quot; &amp;newline&amp; &quot;Art: Jessica Kung with special thanks to &apos;My Little Pony&apos;&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="9142546069679263" type="NarrativeArray">
+                    <param id="0" name="X">14</param>
+                    <param id="1" name="Value">&quot;A special thank you to Mathias Crawford, Dan Klein, and Michael St. Clair, the Grand Dukes of Game Design...&quot;</param>
+                </action>
+                <action id="2" name="Set at X" sid="1713165624994138" type="NarrativeArray">
+                    <param id="0" name="X">15</param>
+                    <param id="1" name="Value">&quot;And of course, to you, the player. We bestow upon you the most heartfelt of congratulations. Best of luck to you on your future explorations!&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="1642606338525342" type="ScriptText">
                     <param id="0" name="Text">NarrativeArray.At(CurrentScript)</param>
@@ -107,6 +155,20 @@
                             <param id="0" name="Layout">NarrativeEndTrigger.LeadsTo</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="8135600665451489">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5021505116334547" type="System">
+                                    <param id="0" name="Variable">CurrentScript</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">16</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-21" name="Reset global variables" sid="4652343242324532" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
@@ -128,6 +190,7 @@
                 <action id="-2" name="Go to layout" sid="4746227464135009" type="System">
                     <param id="0" name="Layout">Title Screen</param>
                 </action>
+                <action id="-21" name="Reset global variables" sid="6001832610301514" type="System" />
             </actions>
         </event-block>
         <event-block sid="858907961515449">
@@ -142,6 +205,86 @@
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="4164036345743031">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6133749202465889" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="8862542867939731" type="PlayerPortrait">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4690431694035451">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="4143235204158364" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1778244589813021" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4308892710052998" type="PlayerPortrait">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="5289254637446876" type="PlayerPortrait">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8360930300793758" type="FatherPortrait">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7041632568112813">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5369224585006354" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6836091763925898" type="PlayerPortrait">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2937639051439819" type="FatherPortrait">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4935570222426998">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6593324880792901" type="System">
+                    <param id="0" name="Variable">CurrentScript</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4953130781768943" type="PlayerPortrait2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6539438870068342">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="4930125091282579" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Epilogue&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

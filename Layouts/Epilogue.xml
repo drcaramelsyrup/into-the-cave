@@ -55,8 +55,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <LeadsTo>Prologue</LeadsTo>
-                        <EndIndex>5</EndIndex>
+                        <LeadsTo>Title Screen</LeadsTo>
+                        <EndIndex>16</EndIndex>
                         <StartIndex>3</StartIndex>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -70,6 +70,72 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerPortrait" uid="125">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>119</x>
+                        <y>327</y>
+                        <z>0</z>
+                        <width>179.811721802</width>
+                        <height>478.367034912</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501048207</hotspotX>
+                        <hotspotY>0.500393987</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FatherPortrait" uid="508">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>498</x>
+                        <y>331</y>
+                        <z>0</z>
+                        <width>284.510406494</width>
+                        <height>463.167633057</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.50051707</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PlayerPortrait2" uid="1009">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>316</x>
+                        <y>296</y>
+                        <z>0</z>
+                        <width>193.377075195</width>
+                        <height>514.455993652</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501048207</hotspotX>
+                        <hotspotY>0.500393987</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

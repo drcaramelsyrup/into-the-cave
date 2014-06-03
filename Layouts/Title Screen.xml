@@ -199,9 +199,9 @@
                 </instance>
                 <instance type="Text4" uid="1007">
                     <properties>
-                        <text>CAVE</text>
+                        <text>INTO THE CAVE</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Eras Bold ITC,-64,400,0</font>
+                        <font>Candara,-64,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -212,11 +212,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>113.719909668</x>
-                        <y>110</y>
+                        <x>78</x>
+                        <y>119</y>
                         <z>0</z>
-                        <width>412.560211182</width>
-                        <height>98.019630432</height>
+                        <width>493</width>
+                        <height>98</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

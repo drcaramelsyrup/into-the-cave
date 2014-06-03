@@ -562,6 +562,8 @@
                     </properties>
                     <instance-variables>
                         <LeadsTo>Level C1</LeadsTo>
+                        <PosX>0</PosX>
+                        <PosY>0</PosY>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

@@ -543,11 +543,11 @@
                 </action>
                 <action id="0" name="Add key" sid="7243528591470964" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A2 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;So, YOU think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down here - the fate of the village depends on us finding that cure. Just don&apos;t get in my way.&apos;- V&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;So, YOU think you have what it takes to become an explorer?  We&apos;re not playing dolls and dress-up down here - the fate of the village depends on us finding that cure. Just don&apos;t get in my way.&quot;&quot; - V&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="5152925871404224" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A3 Start&quot;</param>
-                    <param id="1" name="Value">&quot;Not all doors are open to you yet - for one thing, access to some rooms requires a key... -Father H&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;Not all doors are open to you yet - for one thing, access to some rooms requires a key...&quot;&quot; - Father H&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="9862869336649597" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A4 Start&quot;</param>
@@ -559,7 +559,7 @@
                 </action>
                 <action id="0" name="Add key" sid="4715719614590769" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level A6 Start&quot;</param>
-                    <param id="1" name="Value">&quot;That was really close. This is getting to be more than I thought...&quot;</param>
+                    <param id="1" name="Value">&quot;That was really close. This is getting to be more than I thought... wait, is that a cave guide over there? They have reserves of backup energy to help explorers fast-recharge their shields!&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="6587192187194758" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level B1 Start&quot;</param>
@@ -575,7 +575,7 @@
                 </action>
                 <action id="0" name="Add key" sid="154883615233891" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level C1 Start&quot;</param>
-                    <param id="1" name="Value">&quot;I really just wish I had some support.&quot;</param>
+                    <param id="1" name="Value">&quot;I really just wish I had some support. You know, peers or something to make up for not being part of V&apos;s little club.&quot;</param>
                 </action>
                 <action id="0" name="Add key" sid="311504505254256" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level C2 Start&quot;</param>
@@ -583,7 +583,23 @@
                 </action>
                 <action id="0" name="Add key" sid="7196251861841288" type="TextScriptMap">
                     <param id="0" name="Key">&quot;Level C3 Start&quot;</param>
-                    <param id="1" name="Value">&quot;&apos;Wait! Be careful. I&apos;ve been trying to help out a girl down there, but she fell through the cave...&apos;&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;Wait! Be careful. I&apos;ve been trying to help out a girl down there, but she fell through the cave...&quot;&quot;&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7820342127615716" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level D1 Start&quot;</param>
+                    <param id="1" name="Value">&quot;Whoa. It looks like V&apos;s here... and he looks awfully frustrated.&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="9018890278586048" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level D2 Start&quot;</param>
+                    <param id="1" name="Value">&quot;Well. I guess they didn&apos;t realize that the answer was right under their noses!&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7651183281245232" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level D3 Start&quot;</param>
+                    <param id="1" name="Value">&quot;Just a few more steps...&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="3780523823089433" type="TextScriptMap">
+                    <param id="0" name="Key">&quot;Level D4 Start&quot;</param>
+                    <param id="1" name="Value">&quot;&quot;&quot;Wait! Unlock this door for us, now! Please! I&apos;m sorry we didn&apos;t try to help you! I&apos;m sorry!&quot;&quot; - V&quot;</param>
                 </action>
                 <action id="-24" name="Move to top" sid="5579502612629948" type="ConfidenceBubble" />
                 <action id="-24" name="Move to top" sid="1046834208211288" type="SolidTile" />
@@ -666,6 +682,16 @@
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="3083337256049436" type="ThoughtBubbleTail">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7483910165199055">
+            <conditions>
+                <condition id="-9" inverted="1" name="Is visible" sid="5123127600782803" type="ScriptTrigger" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1353933130060753" type="ThoughtBubbleTail">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
